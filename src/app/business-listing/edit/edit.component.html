@@ -1,0 +1,823 @@
+<form  (ngSubmit)="save()" [formGroup]="businessForm">
+    <div class="container">
+        <div class="list-view">
+            <div class="heading-title">
+                <h3>Edit Business Listing</h3>
+            </div>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-basic-tab" data-toggle="tab" href="#nav-basic" role="tab" aria-controls="nav-basic" aria-selected="true">Basic Info</a>
+                  <a class="nav-item nav-link" id="nav-gallery-tab" data-toggle="tab" href="#nav-gallery" role="tab" aria-controls="nav-gallery" aria-selected="false">Gallery</a>
+                  <a class="nav-item nav-link" id="nav-product-tab" data-toggle="tab" href="#nav-product" role="tab" aria-controls="nav-product" aria-selected="false">Product</a>
+                  <a class="nav-item nav-link" id="nav-service-tab" data-toggle="tab" href="#nav-service" role="tab" aria-controls="nav-service" aria-selected="false">Service</a>
+                  <a class="nav-item nav-link" id="nav-branch-tab" data-toggle="tab" href="#nav-branch" role="tab" aria-controls="nav-service" aria-selected="false">Branch</a>
+                  <a class="nav-item nav-link" id="nav-offer-tab" data-toggle="tab" href="#nav-offer" role="tab" aria-controls="nav-service" aria-selected="false">Offer</a>
+                  <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-service" aria-selected="false">Events</a>
+                  <a class="nav-item nav-link" id="nav-career-tab" data-toggle="tab" href="#nav-career" role="tab" aria-controls="nav-service" aria-selected="false">Career</a>
+                  <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">Review</a>
+                  <a class="nav-item nav-link" id="nav-enq-tab" data-toggle="tab" href="#nav-enq" role="tab" aria-controls="nav-service" aria-selected="false">Enquirey</a>
+                </div>
+              </nav>
+              <div class="tab-content mt-4" id="nav-tabContent" >
+                <div class="tab-pane fade show active" id="nav-basic" role="tabpanel" aria-labelledby="nav-basic-tab">
+                    <div class="edit-view">
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>First Name</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text"  class="text-area" required
+                                    formControlName="firstName">
+                                    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="firstName.errors.required" class="err-font">
+                                            Please provide a valid firstname.
+                                        </div>
+                                     </div>
+                                </div> 
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Last Name</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text"  class="text-area" required
+                                    formControlName="lastName">
+                                    <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="lastName.errors.required" class="err-font">
+                                            Please provide a valid lastname.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Category</p>
+                                </div>
+                                <div class="dropdown">
+                                    <select name="Select a Field" class="dropbtn" placeholder="Select a Field" required
+                                    formControlName="category">
+                                        <option >Tours & Travels</option>
+                                        <option >Textiles</option>
+                                        <option >Bakery</option>
+                                        <option >Hotel</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="category.invalid && (category.dirty || category.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="category.errors.required" class="err-font">
+                                            Please provide a valid Category.
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Sub-Category</p>
+                                </div>
+                                <div class="dropdown">
+                                    <select name="Select a Field" placeholder="Select a Field" class="dropbtn" required
+                                    formControlName="subCategory">
+                                        <option >Tours & Travels</option>
+                                        <option >Textiles</option>
+                                        <option >Bakery</option>
+                                        <option >Hotel</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="subCategory.invalid && (subCategory.dirty || subCategory.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="subCategory.errors.required" class="err-font">
+                                            Please provide a valid Sub-Category.
+                                        </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="edit-buttonblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p style="font-weight: bold;">Address</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Floor/Door Number</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="floorDoorNumber">
+                                    <div *ngIf="floorDoorNumber.invalid && (floorDoorNumber.dirty || floorDoorNumber.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="floorDoorNumber.errors.required" class="err-font">
+                                            Please provide a valid Floor.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Building Name</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                    formControlName="buildingName">
+                                    <div *ngIf="buildingName.invalid && (buildingName.dirty || buildingName.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="buildingName.errors.required" class="err-font">
+                                            Please provide a valid Name.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Landmark</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="landmark">
+                                    <div *ngIf="landmark.invalid && (landmark.dirty || landmark.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="landmark.errors.required" class="err-font">
+                                            Please provide a valid Landmark.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Street Name </p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                    formControlName="streetName">
+                                    <div *ngIf="streetName.invalid && (streetName.dirty || streetName.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="streetName.errors.required" class="err-font">
+                                            Please provide a valid Street.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>City/Nearest Twon</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="nearestTown">
+                                    <div *ngIf="nearestTown.invalid && (nearestTown.dirty || nearestTown.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="nearestTown.errors.required" class="err-font">
+                                            Please provide a valid City.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Zip Code</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                    formControlName="zipCode">
+                                    <div *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="zipCode.errors.required" class="err-font">
+                                            Please provide a valid Zip.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Province </p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="province">
+                                    <div *ngIf="province.invalid && (province.dirty || province.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="province.errors.required" class="err-font">
+                                            Please provide a valid Province.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Country</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                    formControlName="country">
+                                    <div *ngIf="country.invalid && (country.dirty || country.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="country.errors.required" class="err-font">
+                                            Please provide a valid Country.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Keywords </p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="keyWords">
+                                    <div *ngIf="keyWords.invalid && (keyWords.dirty || keyWords.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="keyWords.errors.required" class="err-font">
+                                            Please provide a valid Province.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-buttonblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p style="font-weight: bold;">Contact Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Contact Person Name</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="personName">
+                                    <div *ngIf="personName.invalid && (personName.dirty || personName.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="personName.errors.required" class="err-font">
+                                            Please provide a valid Name.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Mobile</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="Lorem Ipsum Doler" class="text-area"  required
+                                    formControlName="mobile">
+                                    <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="mobile.errors.required" class="err-font">
+                                            Please provide a valid Number.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Designation</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="designation">
+                                    <div *ngIf="designation.invalid && (designation.dirty || designation.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="designation.errors.required" class="err-font">
+                                            Please provide a valid Designation.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Email</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="Lorem Ipsum Doler" class="text-area"  required
+                                    formControlName="email">
+                                    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="email.errors.required" class="err-font">
+                                            Please provide a valid Email.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Description/About</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p> Cover Photo</p>
+                                </div>
+                                <div class="cover-block">
+                                    <div class="img-cover">
+                                        
+                                            <img src="../../../../../assets/img/camera-svg.png">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Pin Location</p>
+                                </div>
+                                <div class="text-block">
+                                    <img src="../../../../../assets/img/map.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-main-block">
+                            <div class="button-block">
+                                <p class="error-msg"></p>
+                                <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="tab-pane fade" id="nav-gallery" role="tabpanel" aria-labelledby="nav-gallery-tab"><p>Gallery works</p></div>
+                <div class="tab-pane fade" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
+                    <div class="edit-buttonblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p style="font-weight: bold;">Product/Service Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Item</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="item">
+                                <div *ngIf="item.invalid && (item.dirty || item.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="item.errors.required" class="err-font">
+                                        Please provide a valid Item.
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Category</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="cat">
+                                <div *ngIf="cat.invalid && (cat.dirty || cat.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="cat.errors.required" class="err-font">
+                                        Please provide a valid Category.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Sub-Category</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="subcat">
+                                <div *ngIf="subcat.invalid && (subcat.dirty || subcat.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="subcat.errors.required" class="err-font">
+                                        Please provide a valid Category.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Price</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="price">
+                                <div *ngIf="price.invalid && (price.dirty || price.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="price.errors.required" class="err-font">
+                                        Please provide a valid Price.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-buttonblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Description</p>
+                            </div>
+                            <div class="text-block">
+                                <textarea type="text" placeholder="" class="text-areablock" required
+                                formControlName="desc"></textarea>
+                                <div *ngIf="desc.invalid && (desc.dirty || desc.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="desc.errors.required" class="err-font">
+                                        Please provide a valid Description.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="button-block">
+                                <button class="btn btn-primary mt-3 add-button">+ Add New Item</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="edit-main-block">
+                        <div class="button-block">
+                            <p class="error-msg"></p>
+                            <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
+                    <div class="edit-buttonblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p style="font-weight: bold;">Product/Service Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Item</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="item">
+                                <div *ngIf="item.invalid && (item.dirty || item.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="item.errors.required" class="err-font">
+                                        Please provide a valid Item.
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Category</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="cat">
+                                <div *ngIf="cat.invalid && (cat.dirty || cat.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="cat.errors.required" class="err-font">
+                                        Please provide a valid Category.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Sub-Category</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="subcat">
+                                <div *ngIf="subcat.invalid && (subcat.dirty || subcat.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="subcat.errors.required" class="err-font">
+                                        Please provide a valid Category.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Price</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="price">
+                                <div *ngIf="price.invalid && (price.dirty || price.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="price.errors.required" class="err-font">
+                                        Please provide a valid Price.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-buttonblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Description</p>
+                            </div>
+                            <div class="text-block">
+                                <textarea type="text" placeholder="" class="text-areablock" required
+                                formControlName="desc"></textarea>
+                                <div *ngIf="desc.invalid && (desc.dirty || desc.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="desc.errors.required" class="err-font">
+                                        Please provide a valid Description.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="button-block">
+                                <button class="btn btn-primary mt-3 add-button">+ Add New Item</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="edit-main-block">
+                        <div class="button-block">
+                            <p class="error-msg"></p>
+                            <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-branch" role="tabpanel" aria-labelledby="nav-branch-tab">
+                    <div class="edit-buttonblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p style="font-weight: bold;">Branch/Franchise Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Branch Name</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="brname">
+                                <div *ngIf="brname.invalid && (brname.dirty || brname.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="brname.errors.required" class="err-font">
+                                        Please provide a valid Name.
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Branch Location</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="brlocation">
+                                <div *ngIf="brlocation.invalid && (brlocation.dirty || brlocation.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="brlocation.errors.required" class="err-font">
+                                        Please provide a valid Location.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Contact Detail</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Add Link Here" class="text-area" required
+                                formControlName="condet">
+                                <div *ngIf="condet.invalid && (condet.dirty || condet.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="condet.errors.required" class="err-font">
+                                        Please provide a valid Contact.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="button-block">
+                                <button class="btn btn-primary mt-3 add-button">+ Add Branch</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="edit-main-block">
+                        <div class="button-block">
+                            <p class="error-msg"></p>
+                            <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-offer" role="tabpanel" aria-labelledby="nav-offer-tab">
+                    <div class="edit-block">
+                            <div class="name-label">
+                                <p style="font-weight: bold;">Offers Details</p>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Title</p>
+                                </div>
+                                <div class="text-block">
+                                    <input type="text" placeholder="" class="text-area" required
+                                    formControlName="title">
+                                    <div *ngIf="title.invalid && (title.dirty || title.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="title.errors.required" class="err-font">
+                                            Please provide a valid Title.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-block">
+                                <div class="name-label">
+                                    <p>Description</p>
+                                </div>
+                                <div class="text-block">
+                                    <textarea type="text" placeholder="" class="text-areablock" required
+                                    formControlName="descr"></textarea>
+                                    <div *ngIf="descr.invalid && (descr.dirty || descr.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="descr.errors.required" class="err-font">
+                                            Please provide a valid Description.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-mainblock">
+                            <div class="edit-block">
+                                <div class="button-block">
+                                    <button class="btn btn-primary mt-3 add-button">+ Add Offer</button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="edit-main-block">
+                            <div class="button-block">
+                                <p class="error-msg"></p>
+                                <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                            </div>
+                        </div>
+                </div>
+                <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p style="font-weight: bold;">Event Details</p>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Title</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="title1">
+                                <div *ngIf="title1.invalid && (title1.dirty || title1.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="title1.errors.required" class="err-font">
+                                        Please provide a valid Title.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Description</p>
+                            </div>
+                            <div class="text-block">
+                                <textarea type="text" placeholder="" class="text-areablock" required
+                                formControlName="descr1"></textarea>
+                                <div *ngIf="descr1.invalid && (descr1.dirty || descr1.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="descr1.errors.required" class="err-font">
+                                        Please provide a valid Description.
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="button-block">
+                                <button class="btn btn-primary mt-3 add-button">+ Add Event</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="edit-main-block">
+                        <div class="button-block">
+                            <p class="error-msg"></p>
+                            <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-career" role="tabpanel" aria-labelledby="nav-career-tab">
+                    <div class="edit-buttonblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p style="font-weight: bold;">Career Option</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Job Tiltle</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="job">
+                                <div *ngIf="job.invalid && (job.dirty || job.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="job.errors.required" class="err-font">
+                                        Please provide a valid Tiltle.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Expected Salary</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="salary">
+                                <div *ngIf="salary.invalid && (salary.dirty || salary.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="salary.errors.required" class="err-font">
+                                        Please provide a valid Salary.
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Qualification</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="quali">
+                                <div *ngIf="quali.invalid && (quali.dirty || quali.touched)"
+                                     class="alert alert-danger">
+                                    <div *ngIf="quali.errors.required" class="err-font">
+                                        Please provide a valid Qualification.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="button-block">
+                                <button class="btn btn-primary mt-3 add-button">+ Add Event</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="edit-main-block">
+                        <div class="button-block">
+                            <p class="error-msg"></p>
+                            <button class="btn btn-primary mt-3 save-button"(click)='save()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab"><p>review works</p></div>
+                <div class="tab-pane fade" id="nav-enq" role="tabpanel" aria-labelledby="nav-enq-tab"><p>enquirey works</p></div>
+              </div>
+        </div>
+    </div>
+    </form>
+
+

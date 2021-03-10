@@ -1,0 +1,326 @@
+<div class="container">
+    <div class=" d-none d-lg-flex filter-block">
+        <div>
+            <p>Filter Results</p>
+           
+        </div>
+        <div class=" location-block">
+            <div class="uk-inline dropdown-submenu">
+                <button class="uk-button uk-button-default drop-bt" type="button">Types<i class="fa fa-caret-down nav-bar"></i></button>
+                <div uk-dropdown="mode: click">
+                      <a class="dropdown-item">Automobile</a>
+                      <a class="dropdown-item">Business Listing</a>
+                      <a class="dropdown-item">Fashion</a>
+                      <a class="dropdown-item">Job</a>
+                      <a class="dropdown-item">Real Estate</a>
+                </div>
+            </div>
+            <div class="d-flex  align-items-center jusify-content-end  nav-controlers">
+                    
+                <button class="btn btn-white mr-2 ml-4  badge-pill px-3 " (click)="locationButton()">Location<i class="fas fa-map-marker-alt ml-3"></i></button>
+            </div>
+            <div class="location-box-header" [class.d-block]="isLocationBoxHeaderVisible" >
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Location">
+                    <button class="btn btn-white" (click)="locationButton()"><i class="fas fa-times"></i></button>
+                    <div class="location-placeholder">
+                        <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                        <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                        <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                        <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" d-flex d-lg-none send-btn">
+        <button class=" uk-button-default uk-margin-small-right btn btn-primary  submi-button" uk-toggle="target: #modal-example">Filter Result</button>
+    </div>
+    <div class="result-heading">
+        <h1>Search Results</h1>
+    </div>
+    <div class="search-container">
+        <div class="product-list">
+            <div class="product-sub">
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../assets/img/shoe-2.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/aprilla.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-sub">
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/fashion.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/racingcar.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-list">
+            <div class="product-sub">
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/menfashion.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/fashion1.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-sub">
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/harley.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class=" curated-list__card">
+                    <div class="card">
+                        <div class="img-holder rounded-20">
+                            <label class="strip bottom-right">
+                                sponsored
+                            </label>
+                            <img src="../../../assets/img/menfashion1.jpg" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label class="card-title">
+                                Lorem ipsum dolor sit amet dsfdsfsdfsdfsdf
+                            </label>
+                            <label class="card-subtitle" for="">Location / Address</label>
+                            <!-- <div class="card-detail">
+                                <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div>
+                                <div class="img">
+                                    <img src="../../assets/img/sponsored.svg" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <app-filter-result-modal></app-filter-result-modal>
+    </div>
+</div>
+

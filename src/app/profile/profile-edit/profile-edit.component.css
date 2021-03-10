@@ -1,0 +1,229 @@
+.container{
+    margin-top: 35px;
+    width: auto;
+    margin-left: 305px;
+  }
+  .heading-tag{
+    font-weight: bold;
+    font-size: large;
+  }
+  .profile-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #E1E3E2;
+  
+  }
+  .upload-bt{
+    display: flex;
+  }
+  .upload-block{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+  }
+  .upadte-label a{
+      color: black;
+  }
+  .upadte-label a:hover{
+    color: #00A2FF;
+  }
+  .bt-block a:hover{
+    color: #00A2FF;
+  }
+  .pro-img{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .heading{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+  }
+  .button-block{
+      width: 100%;
+  }
+  .update-button{
+      width: 100%;
+  }
+  .upload-bt{
+    position: relative;
+    bottom: 50px;
+    z-index: 5;
+    left: 27px;
+    background-color: white;
+    width: 170px;
+    padding-left: 1rem;
+    border-radius: 50px;
+    height: 38px;
+    padding-top: 0.5rem;
+  
+  }
+  .add-bt{
+    margin-right: 0.5rem;
+  }
+  .edit-view{
+    padding: 1rem;
+  }
+  .edit-mainblock{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .edit-block{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .text-block{
+    width: 100%;
+  }
+  .text-area{
+    width: 500px;
+    font-size: small;
+    padding: 0.5rem;
+    
+  }
+  .edit-block{
+    margin-bottom: 2rem;
+  }
+  .save-button{
+    width: 150px;
+  }
+  .pro-pic{
+    width: 27%;
+  }
+  .name-label p{
+    margin: 0;
+  }
+  .profile-view{
+      margin-top: 50px;
+      flex-direction: row;
+      margin-bottom: 60px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      -webkit-box-shadow: 0px 3px 6px #00000029;
+              box-shadow: 0px 3px 6px #00000029;
+      border-radius: 12px;
+      padding: 2rem;
+  }
+  .edit-area{
+    color: #00A2FF;
+    font-weight: bold;
+    
+  }
+  .text-area{
+    width: 100%;
+    font-size: small;
+    padding: 0.5rem;
+    
+  }
+  .alert {
+    border: 0;
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0.5rem;
+    color: red;
+    font-size: smaller;
+  }
+  .error-para{
+    font-size: 14px;
+    color: red;
+    margin-left: 1rem;
+  }
+  .error-msg{
+    font-size: 14px;
+    color: red;
+  }
+  .error-label{
+    font-size: 14px;
+    color: red;
+    margin-left: 6rem;
+  }
+  
+  
+  @media (max-width: 1200px) {
+    .upload-block{
+        width: 40%;
+    }
+    .pro-pic{
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .container{
+      margin-left: 0;
+    }
+    .text-area{
+      width: 100%;
+      font-size: small;
+      padding: 0.5rem;
+     
+    }
+    .upload-block{
+        width: 50%;
+    }
+      
+  }
+  @media (max-width: 768px) {
+    .upload-block{
+        width: 60%;
+    }
+    .pro-pic{
+      width: 35%;
+    }
+    
+  }
+  
+  @media (max-width: 576px) {
+    .upload-block{
+        width: 70%;
+    }
+    .pro-pic{
+      width: 50%;
+    }
+    
+  }
+  @media (max-width: 400px) {
+    .upload-block{
+        width: 90%;
+    }
+    .pro-pic{
+      width: 80%;
+    }
+    .upload-bt{
+      left: 0;
+      width: 165px;
+    }
+    
+  }
+  @media (max-width: 300px) {
+    .upload-block{
+        width: 100%;
+    }
+    .pro-pic{
+      width: 100%;
+    }
+    .upload-bt{
+      left: 0;
+      width: 165px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

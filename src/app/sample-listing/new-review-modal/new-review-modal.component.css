@@ -1,0 +1,95 @@
+.text-area{
+    margin-bottom: 2rem;
+    width: 100%;
+  
+  
+    
+  }
+  .question-block{
+    border-left: 1px solid #ABABAB ;
+    padding-left: 5rem;
+    padding-right: 3rem;
+  
+  }
+  .message-area{
+    width: 100%;
+    height: 150px;
+  }
+  .send-button{
+    width: 150px;
+  
+  }
+  .text-space{
+    padding: 1rem;
+    font-size: small;
+    width: 100%;
+    height: 20px;
+  }
+  .fonts{
+    font-size: small;
+  }
+  .heading-label{
+    color: #33CA88;
+    font-size: larger;
+  }
+  
+  .heading-label span{
+    color: black;
+    border-bottom: 2px solid #33CA88;
+    font-weight: bold;
+  }
+  .botom-title-view{
+    display: flex;
+    background-color:#232D3B ;
+    justify-content: space-between;
+    color: white;
+    margin-top: 50px;
+    align-items: center;
+    padding: 4rem;
+    font-size: small;
+    
+    
+    
+  }
+  .child1{
+    width: 300px;
+    
+  }
+  .child6{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .sub-child6{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .sub1-child6{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .icon-img{
+    width: 40px;
+    height: 40px;
+    
+  }
+  .date-para{
+   font-weight: 200;
+  }
+  .alert {
+    border: 0;
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0.5rem;
+    color: rgb(119, 109, 109)(119, 109, 109);
+    font-size: smaller;
+  }
+  .error-message {
+    color: black;
+    text-transform: capitalize;
+    font-size: 12px;
+  }

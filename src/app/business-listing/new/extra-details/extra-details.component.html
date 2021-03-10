@@ -1,0 +1,179 @@
+<form  [formGroup]="businessPlanDetailForm">
+    <div class="container">
+        <div class="list-view">
+            <div class="heading-title">
+                <h3>Business Listing</h3>
+            </div>
+            <div class="edit-view">
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Caption</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="" class="text-area" required
+                            formControlName="caption" name="caption" >
+                            <div *ngIf="caption.invalid && (caption.dirty || caption.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="caption.errors.required" class="err-font">
+                                    Please provide a valid firstname.
+                                </div>
+                             </div>
+                        </div> 
+                    </div>
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Tags</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" class="text-area" required
+                            formControlName="tags" name="tags">
+                            <div *ngIf="tags.invalid && (tags.dirty || tags.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="tags.errors.required" class="err-font">
+                                    Please provide a valid lastname.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Pin Location</p>
+                        </div>
+                        <div class="text-block">
+                            <img src="../../../../../assets/img/map.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-buttonblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p style="font-weight: bold;">Social Media</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Facebook</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Add Link Here" class="text-area" required
+                            formControlName="facebookLink" name="facebookLink">
+                            <div *ngIf="facebookLink.invalid && (facebookLink.dirty || facebookLink.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="facebookLink.errors.required" class="err-font">
+                                    Please provide a valid Facebook.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Instagram</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Add Link Here" class="text-area" required
+                            formControlName="instagramLink" name="instagramLink">
+                            <div *ngIf="instagramLink.invalid && (instagramLink.dirty || instagramLink.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="instagramLink.errors.required" class="err-font">
+                                    Please provide a valid Instagram.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Twitter</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Add Link Here" class="text-area" required
+                            formControlName="twitterLink" name="twitterLink">
+                            <div *ngIf="twitterLink.invalid && (twitterLink.dirty || twitterLink.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="twitterLink.errors.required" class="err-font">
+                                    Please provide a valid Twitter.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Youtube</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Add Link Here" class="text-area" required
+                            formControlName="youtubeLink" name="youtubeLink">
+                            <div *ngIf="youtubeLink.invalid && (youtubeLink.dirty || youtubeLink.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="youtubeLink.errors.required" class="err-font">
+                                    Please provide a valid Youtube.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Website</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Add Link Here" class="text-area" required
+                            formControlName="websiteLink" name="websiteLink">
+                            <div *ngIf="websiteLink.invalid && (websiteLink.dirty || websiteLink.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="websiteLink.errors.required" class="err-font">
+                                    Please provide a valid Website.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Whatsapp Number</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Add Whatsapp Number" class="text-area" required
+                            formControlName="whatsappNumber" name="whatsappNumber">
+                            <div *ngIf="whatsappNumber.invalid && (whatsappNumber.dirty || whatsappNumber.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="whatsappNumber.errors.required" class="err-font">
+                                    Please provide a valid Youtube.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="check-block">
+                    <div class="button-block">
+                        <input type="checkbox" formControlName="isEnquiries"  class="check-box" >
+                         <label >Enable Enquiry</label><br>
+                         <input type="checkbox" formControlName="isReview"  class="check-box" >
+                         <label >Enable Review</label><br>
+                    </div>
+                    <div class="button-block">
+                        <input type="checkbox" formControlName="isProducts" class="check-box" >
+                         <label >Enable Products</label><br>
+                         <input type="checkbox"formControlName="isServices" class="check-box" >
+                         <label >Enable Services</label><br>
+                    </div>
+                </div>
+                
+                <div class="edit-main-block">
+                    <div class="button-block">
+                        <p class="error-msg"></p>
+                        <button class="btn btn-primary mt-3 save-button" (click)='saveBasicPlanDetails()'>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    
+    

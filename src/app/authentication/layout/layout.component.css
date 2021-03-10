@@ -1,0 +1,181 @@
+
+
+
+.logsign {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .logsign__side-bg {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+  }
+  .logsign__side-bg img{
+    height: 100%;
+  }
+  
+  .logsign__logsign {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;  
+    height: 100vh;
+    overflow-y: scroll;
+    padding-left: 0;
+  }
+  .text-right{
+      color:#008081 ;
+      
+  }
+  
+  .logsign__logsign--privacy {
+    
+    text-align: center;
+    font-size: 14px;
+    margin:3rem 0;
+  }
+  .account_detail{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  
+  .logsign__container {
+    width: 80%;
+    max-width: 400px;
+    min-width: 300px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  
+  .logsign__container--img {
+    display: block;
+    margin: auto;
+  }
+  
+  .logsign__container--title {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 5.8px;
+    color: #1C4144;
+    
+  }
+  
+  .logsign__container--subtitle {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: #222222;
+    opacity: 0.5;
+  }
+  
+  .logsign__container--form-group {
+    margin: 20px 0px;
+  }
+  
+  .logsign__container--form-group label {
+    font-size: 14px;
+  }
+  
+  .logsign__container--form-group .form-control {
+    border: none;
+    border-bottom: 1px solid #E1E3E2;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    font-size: 14px;
+  }
+  
+  .logsign__container--form-group .form-control::-webkit-input-placeholder {
+    color: #222222;
+  }
+  
+  .logsign__container--form-group .form-control:-ms-input-placeholder {
+    color: #222222;
+  }
+  
+  .logsign__container--form-group .form-control::-ms-input-placeholder {
+    color: #222222;
+  }
+  
+  .logsign__container--form-group .form-control::placeholder {
+    color: #222222;
+  }
+  
+  .logsign__container button {
+    width: 40%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .error-para{
+    font-size: 14px;
+    color: red;
+    margin-left: 1rem;
+  }
+  .error-msg{
+    font-size: 14px;
+    color: red;
+    margin-left: 4rem;
+  }
+  .error-label{
+    font-size: 14px;
+    color: red;
+    margin-left: 6rem;
+  }
+
+  .ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+  .alert {
+    border: 0;
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0.5rem;
+    color: red;
+    font-size: smaller;
+  }
+  .form-group .form-control {
+    border: none;
+    border-bottom: 1px solid #E1E3E2;
+    border-radius: 0px;
+    box-shadow: none !important;
+    font-size: 14px;
+  }
+  .spaan{
+    color: black;
+    font-size: 14px;
+    margin-left: 0.8rem;
+  }
+  
+  @media (max-width: 400px) {
+    .logsign__container button {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .logsign__container--title {
+      font-size: 22px;
+    }
+    .logsign__container--subtitle {
+      font-size: 14px;
+    }
+    .flex-parent{
+      display: flex;
+    }
+    
+
+  }
+  /*# sourceMappingURL=logsign.css.map */
+  

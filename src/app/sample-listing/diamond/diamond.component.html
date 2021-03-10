@@ -1,0 +1,412 @@
+
+ <div class="container mw-100 p-0">
+    <div class="background-img">
+            <img  src="{{diamondlisting.imageUrl}}" alt="">
+            <div class=" image-title">
+                <h2>{{diamondlisting.name}}</h2>
+                <p>{{diamondlisting.description}}</p>
+            </div>
+            <div class="ask-button">
+                <button class=" uk-button-default uk-margin-small-right btn btn-primary mt-3 sub-button" uk-toggle="target: #modal-example">Ask A Question</button>
+            </div>
+            <div id="modal-example" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                    <form  (ngSubmit)="submit()" [formGroup]="diamondForm">
+                        <div>
+                            <p class="heading-label"><span>Ask</span>A Question</p>
+                        </div>
+                        <div class="name-label">
+                            <label class="fonts">Name</label>
+                        </div>
+                        <div class="text-area">
+                            <input type="text" placeholder="Enter Your Name" class="text-space" required
+                            formControlName="name">
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="name.errors.required" class="err-font">
+                                Name is required.
+                                </div>
+                             </div>
+                        </div>
+                         
+                        <div class="name-label">
+                            <label class="fonts">Email</label>
+                        </div>
+                        <div class="text-area">
+                            <input type="text" placeholder="Enter Your Email" class="text-space" required
+                            formControlName="email">
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="email.errors.required" class="err-font">
+                                Email is required.
+                                </div>
+                                <div *ngIf="email.errors.pattern" class="err-font">
+                                    You have entered an invalid e-mail address. 
+                                   </div>
+                                 </div>
+                        </div>
+                         
+                        <div class="name-label">
+                            <label class="fonts">Message</label>
+                        </div>
+                        <div class="text-area mb-1">
+                            <textarea class="message-area" required
+                            formControlName="msg"></textarea>
+                            <div *ngIf="msg.invalid && (msg.dirty || msg.touched)"
+                                 class="alert alert-danger">
+                                <div *ngIf="msg.errors.required" class="err-font">
+                                Message is required.
+                                </div>
+                             </div>
+                        </div> 
+                        <div class="button-block">
+                            <button class="btn btn-primary mt-3 send-button" (click)="submit">Submit<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                            <div  class="error-message mt-3">
+                                <label *ngIf="errorMessage" for="">{{errorMessage}}</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    <div class="detailed-about">
+            <div class="detail-view1 ">
+                <div class="detail-heading">
+                    <h1>About Us</h1>
+                </div>
+                <div class="detail-content">
+                    <p style="font-weight: lighter;">
+                        {{diamondlisting.about}}
+                    </p>
+                </div>
+            </div>
+            <div class=" d-none d-lg-block detaile-view2">
+                <div class="image-view1">
+                    <div class="m-2">
+                        <img  src="../../assets/img/books.png" alt="">
+                    </div>
+                    <div class="m-2">
+                        <img  src="../../assets/img/bath.png" alt="">
+                    </div>
+                </div>
+                <div class="image-view2 my-2">
+                    <div>
+                        <img  src="../../assets/img/foods.png" alt="">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class=" d-flex flex-column-reverse flex-lg-row business-detail">
+            <div class="bus-deatil-view1">
+                <div class="img-view1">
+                    <div class="m-2">
+                        <img  src="../../assets/img/books.png" alt="">
+                    </div>
+                    <div class="m-2">
+                        <img  src="../../assets/img/bath.png" alt="">
+                    </div>
+                </div>
+                <div class="img-view2 my-2">
+                    <div>
+                        <img  src="../../assets/img/foods.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bus-detail-view2">
+                <div class="bus-detail-heading" >
+                    <h1 class="">BUSINESS DETAILS</h1>
+                </div>
+                <div class="bus-detail-timing">
+
+                    <div class="d-flex w-100">
+                        <div class="detail-time "><i class="far fa-clock mr-2"></i>Opening Time:</div>
+                        <div class="detail-sub-time">{{diamondlisting.openingTime | date:'shortTime'}}</div>
+                    </div>
+
+                    <div class="d-flex w-100 ">
+                        <div class="detail-time "><i class="far fa-clock mr-2"></i>Closing Time:</div>
+                        <div class="detail-sub-time">{{diamondlisting.closingTime | date:'shortTime'}}</div>
+                    </div>
+
+                    <div class="d-flex w-100">
+                        <div class="detail-time "><i class="far fa-calendar-minus mr-2"></i>Working Days:</div>
+                        <div class="detail-sub-time  ">{{diamondlisting.workingDays}}</div>
+                    </div>
+
+                    <div class="d-flex w-100 location">
+                        <div class="detail-time "><i class="fa fa-map-marker mr-2" aria-hidden="true"></i>Location:</div>
+                        <div class="detail-sub-time">First Floor,Parappil Building<br>Vannapuram Street,Nearest Brutec Pharma<br>Thodupuzha,Idukki<br>Kerala,India<br>Pin:673015</div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class=" uk-position-relative uk-visible-toggle uk-light products-detail"   tabindex="-1" uk-slider>
+            <div class="products-detail-title">
+                <h1 style="font-weight: bold;">Our Products</h1>
+                <p class="d-none d-lg-block"  style="font-weight: lighter;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam
+                </p>
+            </div>
+           <div>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                    <li>
+                        <div class="uk-panel">
+                            <img  src="../../assets/img/room2.png" alt="">
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <img  src="../../assets/img/bag2.png" alt="">
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <img  src="../../assets/img/food2.png" alt="">
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <img  src="../../assets/img/bag2.png" alt="">
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <img  src="../../assets/img/food2.png" alt="">
+                            
+                        </div>
+                    </li>
+                </ul>
+            
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover slider-btn-pre" href="#" uk-slidenav-previous uk-slider-item="previous"><p>Previous</p></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover slider-btn-next" href="#" uk-slidenav-next uk-slider-item="next"><p>Next</p></a>
+            
+            </div>
+           </div>
+    </div>
+    <div class="service-detail">
+            <div class="service-detail-title">
+                <h1>Our Service</h1>
+                <p class="d-none d-lg-block" style="font-weight: lighter;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam
+                </p>
+            </div>
+            <div class="d-flex flex-column flex-lg-row service-detail-view">
+                <div class="service-list mx-lg-2" >
+                    <h1>1</h1>
+                    <p style="font-weight: bold;">Lorem ipsum</p>
+                    <p style="font-size: small;">Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore
+                        magna aliquyam erat
+                    </p>
+                </div>
+                <div class="service-list mx-lg-2">
+                    <h1>2</h1>
+                    <p style="font-weight: bold;">Lorem ipsum</p>
+                    <p style="font-size: small;">Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore
+                        magna aliquyam erat
+                    </p>
+                </div>
+                <div class="service-list mx-lg-2">
+                    <h1>3</h1>
+                    <p style="font-weight: bold;">Lorem ipsum</p>
+                    <p style="font-size: small;">Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore
+                        magna aliquyam erat
+                    </p>
+                </div>
+            </div> 
+    </div>
+    <div class=" d-none d-lg-block review-deatail">
+            <div class=" review-detail-title">
+                <h1>Reviews</h1>
+                
+            </div>
+            <div class=" review-block">
+                <div class=" uk-position-relative uk-visible-toggle uk-light img-block" tabindex="-1" uk-slider="center: true">
+                    <ul class="uk-slider-items uk-grid">
+                        <li class="uk-width-3-4">
+                            <div class="uk-panel">
+                                <p class="review-text">Denise Stevens was run over by a private waste hauling company while crossing the street at Howard and
+                                    Western in Chicago. She sustained multiple fractures as well as a traumatic brain injury. She underwent multiple
+                                    surgeries and a craniotomy to relieve her brain of the blood accumulation.
+                                </p>
+                                <img class="review-image" src="../../assets/img/rev-star.png" alt="">
+                                <div class=" name-block">
+                                    <p style="font-weight: bold;">Devil Roy Barman </p>
+                                </div>
+                                <div class=" rating-block">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-width-3-4">
+                            <div class="uk-panel">
+                                <p class="review-text">Denise Stevens was run over by a private waste hauling company while crossing the street at Howard and
+                                    Western in Chicago. She sustained multiple fractures as well as a traumatic brain injury. She underwent multiple
+                                    surgeries and a craniotomy to relieve her brain of the blood accumulation.
+                                </p>
+                                <img class="review-image" src="../../assets/img/sumao.png" alt="">
+                                <div class=" name-block">
+                                    <p style="font-weight: bold;">Sumao </p>
+                                </div>
+                                <div class=" rating-block">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-width-3-4">
+                            <div class="uk-panel">
+                                <p class="review-text" >Denise Stevens was run over by a private waste hauling company while crossing the street at Howard and
+                                    Western in Chicago. She sustained multiple fractures as well as a traumatic brain injury. She underwent multiple
+                                    surgeries and a craniotomy to relieve her brain of the blood accumulation.
+                                </p>
+                                <img class="review-image" src="../../assets/img/riom.png" alt="">
+                                <div class=" name-block">
+                                    <p style="font-weight: bold;">Riom</p>
+                                </div>
+                                <div class=" rating-block">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover rev-pre-btn" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover rev-next-btn" href="#" uk-slidenav-next uk-slider-item="next"></a> 
+                </div>
+                
+            </div>
+            <div class="review-text-block">
+                <div class="add-button">
+                    <button class=" uk-button-default uk-margin-small-right btn btn-primary  submi-button" uk-toggle="target: #modal-example">Add Your Review</button>
+                </div>
+            </div>
+    </div>
+    <div class=" d-flex d-lg-none  review-view">
+            <div class="review-detail-title">
+                    <h1>Reviews</h1>
+             </div>
+            <div class="review-main-block my-3">
+                    <div class="review-sub-block ">
+                        <div class="review-img-block">
+                            <img src="../../assets/img/sumao.png" alt="">
+                        </div>
+                        <div class="name-block mx-2">
+                            <p class=" rev-name">Sumao</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rev-para">
+                        Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos
+                    </div>
+                    <div>
+                        <p class="date-para">dd/mm/yyy</p>
+                    </div>
+            </div>
+            <div class="review-main-block2 my-3">
+                    <div class="review-sub-block ">
+                        <div class="review-img-block">
+                            <img src="../../assets/img/riom.png" alt="">
+                        </div>
+                        <div class="name-block mx-2">
+                            <p class=" rev-name">Riom</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rev-para">
+                        Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos
+                    </div>
+                    <div>
+                        <p class="date-para">dd/mm/yyy</p>
+                    </div>
+            </div>
+            <div class="send-btn">
+                <button class=" uk-button-default uk-margin-small-right btn btn-primary  submi-button" uk-toggle="target: #modal-example">Add Your Review</button>
+            </div>
+    </div>
+    <div class="bottom-title-view">
+        <div class="title-text">
+            <p style="font-size:larger;">Lorem ipsum dolor</p>
+            <p style="font-weight: lighter;">Lorem ipsum dolor sit
+                amet, consetetur
+                sadipscing elitr, sed
+            </p>
+            <p style="font-weight: lighter;">Lorem ipsum dolor sit amet, consetetur</p>
+        </div>
+        <div class="contact-block">
+            <div class="map-block">
+                <img src="../../assets/img/map.jpg" alt="" class="map-img">
+            </div>
+        </div>
+        <div class="logo-view">
+            <div class="img1 mx-2">
+                <img src="../../assets/img/facebook1.png" alt="" class="icon-img"> 
+            </div>
+            <div class="img2 mx-2">
+                <img src="../../assets/img/message1.png" alt="" class="icon-img"> 
+            </div>
+            <div class="img1 mx-2">
+                <img src="../../assets/img/twitter1.png" alt="" class="icon-img"> 
+            </div>
+            <div class="img2 mx-2">
+                <img src="../../assets/img/insta1.png" alt="" class="icon-img"> 
+            </div>
+        </div>
+     </div>  
+    
+</div>
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <app-new-review-modal></app-new-review-modal>
+    </div>
+</div>
+     
+
+

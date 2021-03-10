@@ -1,0 +1,324 @@
+.curated-list {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px;
+  }
+  .container{
+    margin-top: 50px;
+    width: auto;
+    margin-left: 305px;
+  }
+  
+  .curated-list__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+    padding-left: 15px;
+  }
+  
+  .curated-list__title--title {
+    font-size: 34px;
+    color: #000;
+  }
+  
+  .curated-list__title--control {
+    width: 130px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .curated-list__title--control .col {
+    padding: 0px 10px;
+  }
+  
+  .curated-list__title--control .col .next, .curated-list__title--control .col .previous {
+    width: 100%;
+    padding-top: 81%;
+    background-color: #fff;
+    border: 2px solid #222222B3;
+    color: #000;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .curated-list__title--control .col .next i, .curated-list__title--control .col .previous i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 22px;
+  }
+  
+  .curated-list__title--control .col .next svg, .curated-list__title--control .col .previous svg {
+    display: none;
+  }
+  
+  .curated-list__card-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  
+  .curated-list__card {
+    padding: 10px;
+  }
+  
+  .curated-list__card .card {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+  }
+  
+  .curated-list__card .card .img-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .curated-list__card .card .img-holder .strip {
+    top: 0px;
+    left: 0px;
+    margin-bottom: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-49.07%, #008081), color-stop(103.09%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, #008081 -49.07%, rgba(255, 255, 255, 0) 103.09%);
+  }
+  
+  .curated-list__card .card .img-holder .strip.top-left {
+    top: 0px;
+    left: 0px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-49.07%, #008081), color-stop(103.09%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, #008081 -49.07%, rgba(255, 255, 255, 0) 103.09%);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  
+  .curated-list__card .card .img-holder .strip.top-right {
+    top: 0px;
+    right: 0px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(-65.92%, #008081), color-stop(156.18%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(270deg, #008081 -65.92%, rgba(255, 255, 255, 0) 156.18%);
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .curated-list__card .card .img-holder .strip.bottom-left {
+    top: inherit;
+    bottom: 0px;
+    left: 0px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-49.07%, #008081), color-stop(103.09%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, #008081 -49.07%, rgba(255, 255, 255, 0) 103.09%);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  
+  .curated-list__card .card .img-holder .strip.bottom-right {
+    top: inherit;
+    bottom: 0px;
+    right: 0px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(-65.92%, #008081), color-stop(156.18%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(270deg, #008081 -65.92%, rgba(255, 255, 255, 0) 156.18%);
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .curated-list__card .card .img-holder img {
+    width: 100%;
+  }
+  
+  .curated-list__card .card .info-holder {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 15px;
+    color: #222222;
+  }
+  
+  .curated-list__card .card .info-holder .rating {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    color: #FF3A5D;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 15px;
+  }
+  
+  .curated-list__card .card .info-holder .rating .rating-info {
+    color: #222222;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .curated-list__card .card .info-holder .rating .rating-info span {
+    margin-right: 5px;
+  }
+  
+  .curated-list__card .card .info-holder .card-title {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .curated-list__card .card .info-holder .card-subtitle {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+  .curated-list__card .card .info-holder .card-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .curated-list__card .card .info-holder .card-detail .detail {
+    max-width: 80%;
+    font-size: 14px;
+  }
+  
+  .curated-list__card .card .info-holder .card-detail .detail label {
+    display: block;
+  }
+  
+  .curated-list__card .card .info-holder .card-detail .img {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 22%;
+    margin-right: 1rem;
+    border: 2px solid;
+    background-color: #008081;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .curated-list__card .card .info-holder .card-detail .img img {
+    width: 60px;
+  }
+  .img a{
+    color: white;
+  }
+  /*# sourceMappingURL=curated.css.map */
+
+  @media (max-width: 1200px) {
+  
+}
+
+@media (max-width: 992px) {
+  .container{
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 576px) {
+  
+}
+@media (max-width: 400px) {
+  
+}
+@media (max-width: 300px) {
+  
+}

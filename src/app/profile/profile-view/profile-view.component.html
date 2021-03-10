@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="profile-view">
+        <div class="profile-title">
+            <div class="heading-tag">
+                <p>My Profile</p>
+            </div>
+        </div>
+        <div class="pro-detail">
+            <div class="pro-img">
+                <img  src="{{profilePic}}"  onerror="this.src='../../../assets/img/avatar1.png'" alt="">
+            </div>
+            <div class="about-pro">
+                <h2>{{loggedInUserName}}</h2>
+                <p>{{loggedInUserMobile}}</p>
+                <a>{{loggedInUserEmail}}</a>
+                <div class="reset-block">
+                    <div class="edit-bt">
+                        <div class="edit-icon">
+                            <i class="fas fa-edit" aria-hidden="true"></i> 
+                        </div>
+                        <div class="text-label">
+                            <a [routerLink]="['/dashboard/profile/edit']" routerLinkActive="router-link-active">Edit</a>
+                        </div>
+                    </div>
+                    <div class="reset-bt">
+                        <div class="edit-icon">
+                            <i class="fas fa-key" aria-hidden="true"></i> 
+                        </div>
+                        <div class="text-label">
+                            <a [routerLink]="['/dashboard/profile/reset']" routerLinkActive="router-link-active">Reset Password</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

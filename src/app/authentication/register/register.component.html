@@ -1,0 +1,106 @@
+
+<label class="logsign__container--title" for="">SIGN UP</label>
+<label class="logsign__container--subtitle" for="">Welcome ! Please Create an account.</label>
+<form *ngIf="resetStep == 1" [formGroup]="mobileFormGroup">
+    <div class="form-group mt-3">
+ <input type="mobile" class="form-control" id="exampleInputEmail1" formControlName="mobile" placeholder="Mobile Number" aria-describedby="emailHelp">
+ <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)"
+                   class="alert alert-danger">
+
+     <div *ngIf="mobile.errors.required" class="err-font">
+     Mob.no is required.
+        </div>
+    <div *ngIf="mobile.errors.pattern" class="err-font">
+        Mob.no must be atleast 10 digits 
+          </div>
+   </div> 
+    </div>
+    <button class="btn bg-main w-100 mt-2" (click)="sendOtpToRegister()" style="background-color: #008081;color: white;">Send OTP<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+    <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+</form>
+<form *ngIf="resetStep == 2" [formGroup]="otpFormGroup">
+    <div class="form-group mt-3">
+        <input type="email" class="form-control mb-1" formControlName="otp" placeholder="Enter OTP"  id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div *ngIf="otp.invalid && (otp.dirty || otp.touched)"
+            class="alert alert-danger">
+            <div class="err-font">
+              OTP code is inavlid
+            </div>
+         </div>
+        <a class="spaan">Resend</a>
+    </div>
+    <button class="btn bg-main w-100 mt-2" (click)="verifyOtpToRegister()"style="background-color: #008081;color: white;">Submit OTP<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+    <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+</form>
+<form *ngIf="resetStep == 3" (ngSubmit)="submit()" [formGroup]="registerForm">
+    <div class="form-group logsign__container--form-group">
+        <input type="text"
+         placeholder="Name"
+         class="form-control"
+         required
+         formControlName="name">
+         <div *ngIf="name.invalid && (name.dirty || name.touched)"
+            class="alert alert-danger">
+
+           <div *ngIf="name.errors.required" class="err-font">
+           Name is required.
+           </div>
+            <div *ngIf="name.errors.minlength" class="err-font">
+            Name must be at least 4 characters long.
+            </div>
+         </div> 
+    </div>
+    <div class="form-group logsign__container--form-group" >
+        <input type="text" placeholder="E-mail" class="form-control" formControlName="email" required>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert alert-danger">
+
+           <div *ngIf="email.errors.required" class="err-font">
+           E-mail is required.
+           </div>
+            <div *ngIf="email.errors.pattern" class="err-font">
+             You have entered an invalid e-mail address. 
+            </div>
+         </div> 
+    </div>
+    <div class="form-group logsign__container--form-group">
+        <input type="mobile" placeholder="Mobile Number" class="form-control" formControlName="mobile" required>
+        <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)"
+            class="alert alert-danger">
+           <div *ngIf="mobile.errors.required" class="err-font">
+           Mob.no is required.
+           </div>
+            <div *ngIf="mobile.errors.pattern" class="err-font">
+             Mob.no must be atleast 10 digits 
+            </div>
+         </div> 
+    </div>
+    <div class="form-group logsign__container--form-group">
+        <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="alert alert-danger">
+
+            <div class="err-font">
+                Password must contain atleast 6 characters,
+                including upper/lowercase and numbers.
+            </div>
+         </div> 
+    </div>
+    <div class="form-group logsign__container--form-group">
+        <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" class="form-control" id="exampleInputPassword1">
+        <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched) || !isConfirmPasswordSame"
+            class="alert alert-danger">
+
+            <div class="err-font">
+              Confirm Pasword must be same as password.
+            </div>
+         </div> 
+    </div>
+    <div class="d-flex flex-wrap align-items-center justify-content-between pt-3">
+        <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+        <button class="btn bg-main w-100 mt-2" style="background-color: #008081;color: white;" (click)="submit()"
+        [title]="registerForm.valid ? 'save your entered data' : 'Disabled until the form data is valid ' ">Sign Up<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+        <label for="" class="account_detail">Already have an account? <a [routerLink]="['/authentication/login']" routerLinkActive="router-link-active" class="text-right" ><b>Log In</b></a></label>
+        
+    </div>    
+</form>

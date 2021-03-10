@@ -1,0 +1,2 @@
+create component dashboardHome and mainHome in homeModule
+in homemodule add two routes with childrern as in authentication module for home routes and dashboard routes

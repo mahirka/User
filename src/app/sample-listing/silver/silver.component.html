@@ -1,0 +1,401 @@
+
+<div class="container-fluid p-0">
+    <div class="d-flex  business-view3">
+        <div class="col-12 col-lg-8 p-0 h-100 business-view3__img">
+           <img src="{{silverlisting.imageUrl}}" alt="">
+            <div class="business-view3__info">
+                <label class="business-view3__info--title" for="">{{silverlisting.name}}</label>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>
+                    {{silverlisting.description}}
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex flex-wrap bg-white p-0 business-view3__detail">
+            <div class="col-12 bus-detail">
+                <label for="" class="business-view3__detail--title">{{silverlisting.name}}</label>
+                <label for="" class="business-view3__detail--heading">ABOUT US</label>
+                <p class="business-view3__detail--detail">
+                    {{silverlisting.about}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="detail-about " >
+        <div class="bus-timing-view ">
+            <div class="d-flex w-100 my-2">
+                <div class="detail-time"><i class="fa fa-map-marker mr-2"></i>Location:</div>
+                <div class="detail-sub-time  ">First Floor,Parappil Building<br>Vannapuram Street,Nearest Brutec Pharma<br>Thodupuzha,Idukki<br>Kerala,India<br>Pin:673015</div>
+            </div>
+        </div>
+        <div class="bus-timing-view ml-lg-3">
+                <div class="bus-detail-heading" >
+                    <h2 for="" class="business-view3__detail--heading">BUSINESS TIMING</h2>
+                </div>
+                <div class="d-flex w-100 my-2">
+                    <div class="detail-time"><i class="far fa-clock mr-2"></i>Opening Time:</div>
+                    <div class="detail-sub-time ">{{silverlisting.openingTime | date:'shortTime'}}</div>
+                </div>
+
+                <div class="d-flex w-100 my-2">
+                    <div class="detail-time"><i class="far fa-clock mr-2"></i>Closing Time:</div>
+                    <div class="detail-sub-time ">{{silverlisting.closingTime | date:'shortTime'}}</div>
+                </div>
+
+                <div class="d-flex w-100 my-2">
+                    <div class="detail-time"><i class="far fa-calendar-minus mr-2"></i>Working Days:</div>
+                    <div class="detail-sub-time  ">{{silverlisting.workingDays}}</div>
+                </div>
+         </div>
+    </div>
+    <div class="  gallery-view "  tabindex="-1" uk-slider>
+        <div class="gallery-header">
+        <div class="heading-tag text-lg-center">
+            <h1 class="heading">PRODUCTS</h1>
+        </div>
+        <div class="featured-list__title--control">
+            <div class="col" >
+                <div class="previous" uk-slidenav-previous uk-slider-item="previous">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </div>
+            <div class="col" >
+                <div class="next" uk-slidenav-next uk-slider-item="next">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class=" uk-slider-items gallery-list">
+                <div class="gallery-main-block mx-3">
+                    <div class="gallery-block-img ">
+                        <img src="../../../../assets/img/river.png">
+                    </div>
+                    <div class="para-block">
+                        <p class="para">Dolore magna aliqua</p>
+                        <p class="sub-para">Lorem ipsum dolor sit amet, ipsum labitur
+                            lucilius mel id, ad has appareat.</p>
+                    </div>
+                </div>
+                <div class="gallery-main-block mx-3" >
+                    <div class="gallery-block-img">
+                        <img src="../../../../assets/img/umberlla.png">
+                    </div>
+                    <div class="para-block">
+                        <p class="para">Dolore magna aliqua</p>
+                        <p class="sub-para">Lorem ipsum dolor sit amet, ipsum labitur
+                            lucilius mel id, ad has appareat.</p>
+                    </div>
+                </div>
+                <div class="gallery-main-block mx-3">
+                    <div class="gallery-block-img">
+                        <img src="../../../../assets/img/river.png">
+                    </div>
+                    <div class="para-block">
+                        <p class="para">Dolore magna aliqua</p>
+                        <p class="sub-para">Lorem ipsum dolor sit amet, ipsum labitur
+                            lucilius mel id, ad has appareat.</p>
+                    </div>
+                </div>
+                <div class="gallery-main-block mx-3">
+                    <div class="gallery-block-img">
+                        <img src="../../../../assets/img/desert.png">
+                    </div>
+                    <div class="para-block">
+                        <p class="para">Dolore magna aliqua</p>
+                        <p class="sub-para">Lorem ipsum dolor sit amet, ipsum labitur
+                            lucilius mel id, ad has appareat.</p>
+                    </div>
+                </div>
+                <div class="gallery-main-block mx-3">
+                    <div class="gallery-block-img">
+                        <img src="../../../../assets/img/umberlla.png">
+                    </div>
+                    <div class="para-block">
+                        <p class="para">Dolore magna aliqua</p>
+                        <p class="sub-para">Lorem ipsum dolor sit amet, ipsum labitur
+                            lucilius mel id, ad has appareat.</p>
+                    </div>
+                </div>
+                <div class="gallery-main-block mx-3">
+                    <div class="gallery-block-img">
+                        <img src="../../../../assets/img/river.png">
+                    </div>
+                    <div class="para-block">
+                        <p class="para">Dolore magna aliqua</p>
+                        <p class="sub-para">Lorem ipsum dolor sit amet, ipsum labitur
+                            lucilius mel id, ad has appareat.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="  service-view "  tabindex="-1" uk-slider>
+            <div class="service-header">
+            <div class="heading-tag text-lg-center">
+                <h1 class="heading">SERVICES</h1>
+            </div>
+            <div class="featured-list__title--control">
+                <div class="col" >
+                    <div class="previous" uk-slidenav-previous uk-slider-item="previous">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="col" >
+                    <div class="next" uk-slidenav-next uk-slider-item="next">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <div class=" uk-slider-items service-list">
+                    <div class="service-main-block mx-3">
+                        <div class="service-no ">
+                            <p class="series-no">1</p>
+                        </div>
+                        <div>
+                            <p class="para">Lorem ipsum dolor sit
+                                amet, consetetur</p>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no.</p>
+                        </div>
+                    </div>
+                    <div class="service-main-block mx-3" >
+                        <div class="service-no">
+                            <p class="series-no">2</p>
+                        </div>
+                        <div>
+                            <p class="para">Lorem ipsum dolor sit
+                                amet, consetetur</p>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no.</p>
+                        </div>
+                    </div>
+                    <div class="service-main-block mx-3">
+                        <div class="service-no">
+                            <p class="series-no">3</p>
+                        </div>
+                        <div>
+                            <p class="para">Lorem ipsum dolor sit
+                                amet, consetetur</p>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no.</p>
+                        </div>
+                    </div>
+                    <div class="service-main-block mx-3">
+                        <div class="service-no">
+                            <p class="series-no">4</p>
+                        </div>
+                        <div>
+                            <p class="para">Lorem ipsum dolor sit
+                                amet, consetetur</p>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no.</p>
+                        </div>
+                    </div>
+                    <div class="service-main-block mx-3">
+                        <div class="service-no">
+                            <p class="series-no">5</p>
+                        </div>
+                        <div>
+                            <p class="para">Lorem ipsum dolor sit
+                                amet, consetetur</p>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no.</p>
+                        </div>
+                    </div>
+                    <div class="service-main-block mx-3">
+                        <div class="service-no">
+                            <p class="series-no">6</p>
+                        </div>
+                        <div>
+                            <p class="para">Lorem ipsum dolor sit
+                                amet, consetetur</p>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no.</p>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <div class="  review-view">
+        <div class="col-12 col-lg-7 card-detail">
+            <label for="" class="card-detail--title text-dark">
+                Reviews
+            </label>
+            <div class="">
+                <div class="review-mainblock ">
+                    <div class="d-flex w-100 border-bottom border-top review">
+                        <img src="../../assets/img/user.png" alt="">
+                        <div class="review__detail">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label for="" class="review__detail--name">Jeniffer Lopez</label>
+                            <p class="review__detail--detail">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                tempor invidunt ut
+                            </p>
+                            <p class="review__detail--date">
+                                Reviewed 21 December 2018
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-mainblock">
+                    <div class="d-flex w-100 border-bottom border-top review">
+                        <img src="../../../../assets/img/ramesh.png" alt="">
+                        <div class="review__detail">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label for="" class="review__detail--name">Ramesh Ravi</label>
+                            <p class="review__detail--detail">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                tempor invidunt ut
+                            </p>
+                            <p class="review__detail--date">
+                                Reviewed 21 December 2018
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 rev-textarea">
+                    <div class="form-group">
+                        <button class=" uk-button-default uk-margin-small-right btn btn-primary mt-3 submi-button" uk-toggle="target: #modal-example">Add Your Review</button>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 question-block">
+            <form  (ngSubmit)="submit()" [formGroup]="silverForm">
+                <div>
+                    <p class="heading-label"><span>Ask</span> A Question</p>
+                </div>
+                <div class="name-label">
+                    <label class="fonts">Name</label>
+                </div>
+                <div class="text-area">
+                    <input type="text" placeholder="Enter Your Name" class="text-space" required
+                    formControlName="name">
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                         class="alert alert-danger">
+                        <div *ngIf="name.errors.required" class="err-font">
+                        Name is required.
+                        </div>
+                </div>
+                </div>
+                 
+                <div class="name-label">
+                    <label class="fonts">Email</label>
+                </div>
+                <div class="text-area">
+                    <input type="text" placeholder="Enter Your Email" class="text-space" required
+                    formControlName="email">
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                         class="alert alert-danger">
+                        <div *ngIf="email.errors.required" class="err-font">
+                        Email is required.
+                        </div>
+                        <div *ngIf="email.errors.pattern" class="err-font">
+                            You have entered an invalid e-mail address. 
+                           </div>
+                </div>
+                </div>
+                 
+                <div class="name-label">
+                    <label class="fonts">Message</label>
+                </div>
+                <div class="text-area mb-1">
+                    <textarea class="message-area" required
+                    formControlName="msg"></textarea>
+                    <div *ngIf="msg.invalid && (msg.dirty || msg.touched)"
+                         class="alert alert-danger">
+                        <div *ngIf="msg.errors.required" class="err-font">
+                        Message is required.
+                        </div>
+                </div>
+                </div>
+                
+                <div class="button-block">
+                    <button class="btn btn-primary mt-3 send-button" (click)="submit">Send<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                    <div  class="error-message mt-3">
+                        <label *ngIf="errorMessage" for="">{{errorMessage}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="botom-title-view">
+                <div class="child1">
+                    <p style="font-weight: bold;">LOGO</p>
+                    <P>
+                        {{silverlisting.footerText}}                
+                    </P>
+                </div>
+                <div class="contact-block">
+                    <div class="map-block">
+                        <img src="../../assets/img/map.jpg" alt="" class="map-img">
+                    </div>
+                </div>
+                <div class="child6 ">
+                    <div class="sub-child6">
+                        <div class="img1">
+                            <img src="../../assets/img/iconfinder_facebook_608767.svg" alt="" class="icon-img"> 
+                        </div>
+                        <div class="img2">
+                            <img src="../../assets/img/iconfinder_youtube_608761.svg" alt=""class="icon-img"> 
+                        </div>
+                    </div>
+                    <div class="sub1-child6">
+                        <div class="img1">
+                            <img src="../../assets/img/iconfinder_instagram_608765.svg" alt="" class="icon-img"> 
+                        </div>
+                        <div class="img2">
+                            <img src="../../assets/img/iconfinder_twitter_608766.svg" alt=""class="icon-img"> 
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div>
+
+
+
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <app-new-review-modal></app-new-review-modal>
+    </div>
+</div>

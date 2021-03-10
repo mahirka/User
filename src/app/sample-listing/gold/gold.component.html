@@ -1,0 +1,374 @@
+
+<div class="container-fluid p-0">
+    <div class="d-flex flex-column-reverse flex-lg-row  parent-company">
+            <div class="company-detail">
+                <div class=" company-detail-view1">
+                    <div class="d-none d-lg-block company-detail-heading">
+                        <h1 class="heading">{{goldlisting.name}}</h1>
+                    </div>
+                    <div class="d-lg-none company-detail-heading">
+                        <h1 class="heading">About Us</h1>
+                    </div>
+                    <div class="d-none d-lg-block rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-para">
+                         {{goldlisting.about}}
+                    </p>
+                </div>
+            </div>
+            <div class=" company-detail-img">
+                <div class="uk-position-relative uk-visible-toggle uk-light h-100" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+
+                    <ul class="uk-slider-items h-100 uk-grid">
+                        <li class="uk-width-1 h-100">
+                            <div class="uk-panel h-100">
+                                <img src="../../assets/img/big.png" alt="">
+                                <div class="uk-overlay py-2 uk-overlay-primary uk-position-bottom uk-transition-slide-bottom">
+                                    <div class="container">
+                                        <div class="info-holder">
+                                            <div class="company-detail-heading">
+                                                <h1 class="heading">{{goldlisting.name}}</h1>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-width-1 h-100">
+                            <div class="uk-panel h-100">
+                                <img src="../../assets/img/big-list-1.png" alt="">
+                                <div class="uk-overlay py-2 uk-overlay-primary uk-position-bottom uk-transition-slide-bottom">
+                                    <div class="container">
+                                        <div class="info-holder">
+                                            <div class="company-detail-heading">
+                                                <h1 class="heading">{{goldlisting.name}}</h1>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    <div class="uk-position-bottom-center uk-position-small">
+                        <ul class="uk-slider-nav uk-dotnav"></ul>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    <div class="detail-about " >
+        <div class="bus-timing-view ">
+            <div class="d-flex w-100 my-2">
+                <div class="detail-time"><i class="fa fa-map-marker mr-2"></i>Location:</div>
+                <div class="detail-sub-time  ">First Floor,Parappil Building<br>Vannapuram Street,Nearest Brutec Pharma<br>Thodupuzha,Idukki<br>Kerala,India<br>Pin:673015</div>
+            </div>
+        </div>
+        <div class="bus-timing-view ml-lg-3">
+                <div class="bus-detail-heading" >
+                    <h2 for="" class="business-view3__detail--heading">BUSINESS TIMING</h2>
+                </div>
+                <div class="d-flex w-100 my-2">
+                    <div class="detail-time"><i class="far fa-clock mr-2"></i>Opening Time:</div>
+                    <div class="detail-sub-time ">{{goldlisting.openingTime | date:'shortTime'}}</div>
+                </div>
+
+                <div class="d-flex w-100 my-2">
+                    <div class="detail-time"><i class="far fa-clock mr-2"></i>Closing Time:</div>
+                    <div class="detail-sub-time ">{{goldlisting.closingTime | date:'shortTime'}}</div>
+                </div>
+
+                <div class="d-flex w-100 my-2">
+                    <div class="detail-time"><i class="far fa-calendar-minus mr-2"></i>Working Days:</div>
+                    <div class="detail-sub-time  ">{{goldlisting.workingDays}}</div>
+                </div>
+         </div>
+    </div>
+    <div class="  gallery-view "  tabindex="-1" uk-slider>
+            <div class="gallery-header">
+            <div class="heading-tag text-lg-center">
+                <h1 class="heading">Gallery</h1>
+            </div>
+            <div class="featured-list__title--control">
+                <div class="col" >
+                    <div class="previous" uk-slidenav-previous uk-slider-item="previous">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="col" >
+                    <div class="next" uk-slidenav-next uk-slider-item="next">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <div class=" uk-slider-items gallery-list">
+                    <div class="gallery-block-img mx-3">
+                        <img src="../../assets/img/books.png">
+                    </div>
+                    <div class="gallery-block-img mx-3">
+                        <img src="../../assets/img/fd.png">
+                    </div>
+                    <div class="gallery-block-img mx-3">
+                        <img src="../../assets/img/bath.png">
+                    </div>
+                </div>
+    </div>
+    <div class="  product-view " tabindex="-1" uk-slider>
+            <div class="product-header">
+                <div class="heading-tag text-lg-center">
+                    <h1 class="heading">Our Products</h1>
+                </div>
+                <div class="featured-list__title--control">
+                    <div class="col" style="padding: 0;">
+                        <div class="previous" uk-slidenav-previous uk-slider-item="previous">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="col" style="padding: 0;">
+                        <div class="next" uk-slidenav-next uk-slider-item="next">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+                <div class=" uk-slider-items product-list ">
+                    <div class="product-block-img mx-3">
+                        <img src="../../assets/img/car.png">
+                        <p class="para">Lorem ipsum dolor sit</p>
+                        <p class="para-sub">Lorem ipsum dolor sit</p>
+
+                    </div>
+                    <div class="product-block-img mx-3">
+                        <img src="../../assets/img/bag.png">
+                        <p class="para">Lorem ipsum dolor sit</p>
+                        <p class="para-sub">Lorem ipsum dolor sit</p>
+                    </div>
+                    <div class="product-block-img mx-3">
+                        <img src="../../assets/img/craft.png">
+                        <p class="para">Lorem ipsum dolor sit</p>
+                        <p class="para-sub">Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+    </div>
+    <div class="  service-view ">
+            <div class="service-header">
+                <h1 class="heading">Our Services</h1>
+            </div>
+                <div class="d-flex flex-column flex-lg-row service-list">
+                    
+                    <div class="service-block1 mx-3">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p class="service-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+
+                            diam nonumy eirmod tempor invidunt ut labore et dolore
+
+                            magna aliquyam erat, sed diam voluptua. At vero eos et
+
+                            accusam et justo duo dolores et ea rebum. Stet clita kasd
+
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor
+
+                            sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+
+                            elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                    </div>
+                    <div class="service-block2 mx-3">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p class="service-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore
+                            magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                            sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                            elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                    </div>
+                   
+            </div>
+    </div>
+    <div class="  review-view">
+        <div class="col-12 col-lg-7 card-detail">
+            <label for="" class="card-detail--title text-dark">
+                Reviews
+            </label>
+            <div class="">
+                <div class="review-mainblock ">
+                    <div class="d-flex w-100 border-bottom border-top review">
+                        <img src="../../assets/img/user.png" alt="">
+                        <div class="review__detail">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label for="" class="review__detail--name">Jeniffer Lopez</label>
+                            <p class="review__detail--detail">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                tempor invidunt ut
+                            </p>
+                            <p class="review__detail--date">
+                                Reviewed 21 December 2018
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-mainblock">
+                    <div class="d-flex w-100 border-bottom border-top review">
+                        <img src="../../../../assets/img/ramesh.png" alt="">
+                        <div class="review__detail">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div>
+                            <label for="" class="review__detail--name">Ramesh Ravi</label>
+                            <p class="review__detail--detail">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                tempor invidunt ut
+                            </p>
+                            <p class="review__detail--date">
+                                Reviewed 21 December 2018
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 rev-textarea">
+                    <div class="form-group">
+                        <button class=" uk-button-default uk-margin-small-right btn btn-primary mt-3 submi-button" uk-toggle="target: #modal-example">Add Your Review</button>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 question-block">
+            <form  (ngSubmit)="submit()" [formGroup]="goldForm">
+                <div>
+                    <p class="heading-label"><span>Ask</span> A Question</p>
+                </div>
+                <div class="name-label">
+                    <label class="fonts">Name</label>
+                </div>
+                <div class="text-area">
+                    <input type="text" placeholder="Enter Your Name" class="text-space" required
+                    formControlName="name">
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                         class="alert alert-danger">
+                        <div *ngIf="name.errors.required" class="err-font">
+                        Name is required.
+                        </div>
+                </div>
+                </div>
+                 
+                <div class="name-label">
+                    <label class="fonts">Email</label>
+                </div>
+                <div class="text-area">
+                    <input type="text" placeholder="Enter Your Email" class="text-space" required
+                    formControlName="email">
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                         class="alert alert-danger">
+                        <div *ngIf="email.errors.required" class="err-font">
+                        Email is required.
+                        </div>
+                        <div *ngIf="email.errors.pattern" class="err-font">
+                            You have entered an invalid e-mail address. 
+                           </div>
+                </div>
+                </div>
+                 
+                <div class="name-label">
+                    <label class="fonts">Message</label>
+                </div>
+                <div class="text-area mb-1">
+                    <textarea class="message-area" required
+                    formControlName="msg"></textarea>
+                    <div *ngIf="msg.invalid && (msg.dirty || msg.touched)"
+                         class="alert alert-danger">
+                        <div *ngIf="msg.errors.required" class="err-font">
+                        Message is required.
+                        </div>
+                </div>
+                </div>
+                
+                <div class="button-block">
+                    <button class="btn btn-primary mt-3 send-button" (click)="submit">Send<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                    <div  class="error-message mt-3">
+                        <label *ngIf="errorMessage" for="">{{errorMessage}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="botom-title-view">
+            <div class="child1">
+                <p style="font-weight: bold;">LOGO</p>
+                <P>
+                    {{goldlisting.footerText}}
+                </P>
+            </div>
+            <div class="contact-block">
+                <div class="map-block">
+                    <img src="../../assets/img/map.jpg" alt="" class="map-img">
+                </div>
+            </div>
+            <div class="child6 ">
+                <div class="sub-child6">
+                    <div class="img1">
+                        <img src="../../assets/img/iconfinder_facebook_608767.svg" alt="" class="icon-img"> 
+                    </div>
+                    <div class="img2">
+                        <img src="../../assets/img/iconfinder_youtube_608761.svg" alt=""class="icon-img"> 
+                    </div>
+                </div>
+                <div class="sub1-child6">
+                    <div class="img1">
+                        <img src="../../assets/img/iconfinder_instagram_608765.svg" alt="" class="icon-img"> 
+                    </div>
+                    <div class="img2">
+                        <img src="../../assets/img/iconfinder_twitter_608766.svg" alt=""class="icon-img"> 
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <app-new-review-modal></app-new-review-modal>
+    </div>
+</div>
+
+    
+

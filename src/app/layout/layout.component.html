@@ -1,0 +1,482 @@
+    <div class="container-fluid top-nav py-2 "  [class.top-nav-offset]="isHeaderSearchVisible">
+        <div *ngIf="isDashboardInLargeScreen" class="d-none d-lg-block sidemenu-container">
+            <div class="sub-container">
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-th" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">DASHBOARD</a>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">ADD NEW LIST</a>
+                        <div class="panel-collapse collapse sub-menu" id="collapseExample">
+                            <div class="panel-body">
+                                <a [routerLink]="['/dashboard/business-listing/new/basic-details']" routerLinkActive="router-link-active">Business Listing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a data-toggle="collapse" href="#collapseExam" role="button" aria-expanded="false" aria-controls="collapseExample">VIEW MY LISTINGS</a>
+                        <div class="panel-collapse collapse sub-menu" id="collapseExam">
+                            <div class="panel-body">
+                                <a [routerLink]="['/dashboard/business-listing/view-all']" routerLinkActive="router-link-active">Business Listing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a>FAVOURITES</a>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a [routerLink]="['/dashboard/profile/view']" routerLinkActive="router-link-active">VIEW MY PROFILE</a>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class='fas fa-puzzle-piece'></i>
+                    </div>
+                    <div class="menu-label">
+                        <a [routerLink]="['/dashboard/plan-view']" routerLinkActive="router-link-active"> PLANS</a>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a class="  uk-margin-small-right " uk-toggle="target: #modal-example1">INVITE</a>
+                    </div>
+                    <div id="modal-example1" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body invite-block">
+                            <div class="main-heading">
+                                <p class="heading-label"><span>Invite</span> A Friends</p>
+                            </div>
+                            <div class="invite-menu">
+                                <div class="icon-img1">
+                                    <img src="../../../assets/img/copy.png" alt="">
+                                </div>
+                                <div class="invite-para"> 
+                                    <a>Copy invitation link</a>
+                                </div>
+                            </div>
+                            <div class="invite-menu">
+                                <div class="icon-img">
+                                    <img src="../../../assets/img/facebook.svg" alt="">
+                                </div>
+                                <div class="invite-para1"> 
+                                    <a>Share Via Facebook</a>
+                                </div>
+                            </div>
+                            <div class="invite-menu">
+                                <div class="icon-img">
+                                    <img src="../../../assets/img/whatsapp.svg" alt="">
+                                </div>
+                                <div class="invite-para1"> 
+                                    <a>Share Via Whatsapp</a>
+                                </div>
+                            </div>
+                            <div class="invite-menu">
+                                <div class="icon-img2">
+                                    <img src="../../../assets/img/twitter2.png" alt="">
+                                </div>
+                                <div class="invite-para"> 
+                                    <a>Share Via Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-view1">
+                    <div class="img-icon">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-label">
+                        <a class="  uk-margin-small-right " uk-toggle="target: #modal-example2">LOG OUT</a>
+                    </div>
+                    <div id="modal-example2" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body logout-block">
+                            <div class="heading">
+                                <h3>Logout</h3>
+                            </div>
+                            <div class="para">
+                                <p>Are you sure you want to logout?</p>
+                            </div>
+                            <div class="bt-block">
+                                <button class=" uk-modal-close modal-button sub-bt mr-2">No</button>
+                                <button class="uk-modal-close modal-button sub-bt1" (click)="logout()">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="container px-0 px-lg-3">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand d-lg-block d-none ml-3" href="#">
+                    <img src="../../assets/img/without-space-logo.png" alt="">
+                </a>
+                <button class="btn border side-nav-control mr-3" type="button" uk-toggle="target: #offcanvas-usage">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="16" height="1"/><rect x="2" y="9" width="16" height="1"/><rect x="2" y="14" width="16" height="1"/></svg>
+                </button>
+                <div id="offcanvas-usage" class="dashboard-maincontainer"  uk-offcanvas>
+                    <div class="uk-offcanvas-bar dashboard-container ">
+                        <button class="uk-offcanvas-close close-bt" type="button" uk-close></button>
+                        <div class="img-logo">
+                            <img src="../../../assets/img/logo-list.png">
+                        </div>
+                        <div class="menu-container">
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <img src="../../../assets/img/Icon material-dashboard.svg">
+                                </div>
+                                <div class="menu-label1">
+                                    <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">DASHBOARD</a>
+                                </div>
+                            </div>
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </div>
+                                <div class="menu-label1">
+                                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">ADD NEW LIST</a>
+                                    <div class="panel-collapse collapse sub-menu" id="collapseExample">
+                                        <div class="panel-body">
+                                            <a [routerLink]="['/dashboard/business-listing/new/basic-details']" routerLinkActive="router-link-active">Business Listing</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                </div>
+                                <div class="menu-label1">
+                                    <a data-toggle="collapse" href="#collapseExam" role="button" aria-expanded="false" aria-controls="collapseExample">VIEW MY LISTINGS</a>
+                                    <div class="panel-collapse collapse sub-menu" id="collapseExam">
+                                        <div class="panel-body">
+                                            <a [routerLink]="['/dashboard/business-listing/view-all']" routerLinkActive="router-link-active">Business Listing</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <img src="../../../assets/img/favourite.png">
+                                </div>
+                                <div class="menu-label1">
+                                    <a>FAVOURITES</a>
+                                </div>
+                            </div>
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <img src="../../../assets/img/pro.png">
+                                </div>
+                                <div class="menu-label1">
+                                    <a [routerLink]="['dashboard/profile/view']" routerLinkActive="router-link-active">VIEW MY PROFILE</a>
+                                </div>
+                            </div>
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <img src="../../../assets/img/plans.png">
+                                </div>
+                                <div class="menu-label1">
+                                    <a [routerLink]="['/dashboard/plan-view']" routerLinkActive="router-link-active">PLANS</a>
+                                </div>
+                            </div>
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <img src="../../../assets/img/invite.png">
+                                </div>
+                                <div class="menu-label1">
+                                    <a class="uk-margin-small-right " uk-toggle="target: #modal-example3">INVITE</a>
+                                </div>
+                                <div id="modal-example3" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body invite-block">
+                                        <div class="main-heading">
+                                            <p class="heading-label"><span>Invite</span> A Friends</p>
+                                        </div>
+                                        <div class="invite-menu">
+                                            <div class="icon-img1">
+                                                <img src="../../../assets/img/copy.png" alt="">
+                                            </div>
+                                            <div class="invite-para"> 
+                                                <a>Copy invitation link</a>
+                                            </div>
+                                        </div>
+                                        <div class="invite-menu">
+                                            <div class="icon-img">
+                                                <img src="../../../assets/img/facebook.svg" alt="">
+                                            </div>
+                                            <div class="invite-para1"> 
+                                                <a>Share Via Facebook</a>
+                                            </div>
+                                        </div>
+                                        <div class="invite-menu">
+                                            <div class="icon-img">
+                                                <img src="../../../assets/img/whatsapp.svg" alt="">
+                                            </div>
+                                            <div class="invite-para1"> 
+                                                <a>Share Via Whatsapp</a>
+                                            </div>
+                                        </div>
+                                        <div class="invite-menu">
+                                            <div class="icon-img2">
+                                                <img src="../../../assets/img/twitter2.png" alt="">
+                                            </div>
+                                            <div class="invite-para"> 
+                                                <a>Share Via Twitter</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-view">
+                                <div class="img-icon">
+                                    <img src="../../../assets/img/Group 928.svg">
+                                </div>
+                                <div class="menu-label1">
+                                    <a class="  uk-margin-small-right " uk-toggle="target: #modal-example4">LOG OUT</a>
+                                </div>
+                                <div id="modal-example4" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body logout-block">
+                                        <div class="heading">
+                                            <h3>Logout</h3>
+                                        </div>
+                                        <div class="para">
+                                            <p>Are you sure you want to logout?</p>
+                                        </div>
+                                        <div class="bt-block">
+                                            <button class="uk-modal-close modal-button sub-bt mr-2">No</button>
+                                            <button class="uk-modal-close modal-button sub-bt1" (click)="logout()">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <div class="d-flex flex-wrap align-items-center jusify-content-end ml-auto nav-controler">
+                        <ul class="navbar-nav flex-row ml-auto mt-0 mr-3">
+
+                            <li class="nav-item pr-2 dropdown show">
+                                <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                                    <button class="btn btn-white mr-5 badge-pill px-3 d-lg-inline-block d-none ">Location<i class="fas fa-map-marker-alt ml-3"></i></button>
+                                </a>
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink4">
+                                <div class="location-menu">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Location">
+                                        <div class="location-placeholder">
+                                            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+
+                            <li class="nav-item pr-2 active ">
+                                <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">
+                                    <i class="fas fa-home"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown border-left pl-3">
+                    <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <label class="dropdown-toggle mr-2 pointer" for="">{{loggedInUserName}}</label>
+                        <img class="profile-pic" src="{{profilePic}}"  onerror="this.src='../../../assets/img/avatar1.png'" alt="">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class="profile-menu">
+                            <div class="pro-menu mt-2">
+                                <div class="li-icon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div class="pro-label">
+                                    <a [routerLink]="['dashboard/profile/view']" routerLinkActive="router-link-active">VIEW MY PROFILE</a>
+                                </div>
+                            </div>
+                            <div class="pro-menu">
+                                <div class="li-icon">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                </div>
+                                <div class="pro-label">
+                                    <a [routerLink]="['dashboard/profile/edit']" routerLinkActive="router-link-active">EDIT PROFILE</a>
+                                </div>
+                            </div>
+                            <div class="pro-menu">
+                                <div class="li-icon">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                </div>
+                                <div class="pro-label">
+                                    <a class="  uk-margin-small-right " uk-toggle="target: #modal-example4">LOG OUT</a>
+                                </div>
+                                <div id="modal-example4" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body logout-block">
+                                        <div class="heading">
+                                            <h3>Logout</h3>
+                                        </div>
+                                        <div class="para">
+                                            <p>Are you sure you want to logout?</p>
+                                        </div>
+                                        <div class="bt-block">
+                                            <button class="uk-modal-close modal-button sub-bt mr-2">No</button>
+                                            <button class="uk-modal-close modal-button sub-bt1" (click)="logout()">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid py-3 top-nav-secondary">
+        <nav class="navbar navbar-expand-lg navbar-light py-0">
+            <a class="navbar-brand d-lg-block d-none" href="#">
+                <img src="../../assets/img/without-space-logo.png" alt="">
+            </a>
+
+            <button class="btn border side-nav-control" type="button" uk-toggle="target: #offcanvas-usage">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="16" height="1"/><rect x="2" y="9" width="16" height="1"/><rect x="2" y="14" width="16" height="1"/></svg>
+            </button>
+
+            <div id="offcanvas-usage" uk-offcanvas>
+                <div class="uk-offcanvas-bar">
+
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                    <h3>Title</h3>
+
+                    <p>Lorem jjjujjujujujj dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                </div>
+            </div>
+
+            
+
+            <div class="search-header-component ">
+                <button class="btn btn-white shadow-none"><i class="fas fa-search"></i></button>
+                <div class="form-group col">
+                    <input type="password" class="form-control input-box" id="exampleInputPassword1" placeholder="Find new Business">
+                </div>
+                <select class="form-control d-lg-inline-block d-none">
+                    <option>Default select</option>
+                </select>
+            </div>
+            <div class=" flex-wrap d-none d-lg-flex  align-items-center jusify-content-end ml-auto nav-controler">
+                <div class="dropdown">
+                    <a  class="nav-link" href="#" role="button" id="dropdownMenuLink-6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-white mr-5 badge-pill px-3 d-lg-inline-block d-none" >Location<i class="fas fa-map-marker-alt ml-3"></i></button>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink-6">
+                        <div class="location-menu">
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Location">
+                                <div class="location-placeholder">
+                                    <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                    <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                    <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                    <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav flex-row ml-auto mt-0 mr-3">
+                    
+                    <li class="nav-item pr-2 active">
+                      <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"><i class="fas fa-home"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown border-left pl-2">
+                <a role="button" id="dropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <label class="dropdown-toggle mr-2 pointer d-lg-inline-block d-none" for="">{{loggedInUserName}}</label>
+                    <img class="profile-pic" src="{{profilePic}}"  onerror="this.src='../../../assets/img/avatar1.png'" alt="">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink-5">
+                    <div class="profile-menu">
+                        <div class="pro-menu mt-2">
+                            <div class="li-icon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                            <div class="pro-label">
+                                <a [routerLink]="['dashboard/profile/view']" routerLinkActive="router-link-active">VIEW MY PROFILE</a>
+                            </div>
+                        </div>
+                        <div class="pro-menu">
+                            <div class="li-icon">
+                                <i class="fas fa-edit" aria-hidden="true"></i>
+                            </div>
+                            <div class="pro-label">
+                                <a [routerLink]="['dashboard/profile/edit']" routerLinkActive="router-link-active">EDIT PROFILE</a>
+                            </div>
+                        </div>
+                        <div class="pro-menu">
+                            <div class="li-icon">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            </div>
+                            <div class="pro-label">
+                                <a class="  uk-margin-small-right " uk-toggle="target: #modal-example4">LOG OUT</a>
+                            </div>
+                            <div id="modal-example4" uk-modal>
+                                <div class="uk-modal-dialog uk-modal-body logout-block">
+                                    <div class="heading">
+                                        <h3>Logout</h3>
+                                    </div>
+                                    <div class="para">
+                                        <p>Are you sure you want to logout?</p>
+                                    </div>
+                                    <div class="bt-block">
+                                        <button class="uk-modal-close modal-button sub-bt mr-2">No</button>
+                                        <button class="uk-modal-close modal-button sub-bt1" (click)="logout()" >Yes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="d-flex  flex-wrap d-lg-none align-items-center jusify-content-end ml-auto add-mobile-button">
+        <ul class="navbar-nav  flex-row ml-auto mt-0 mr-3">
+        
+            <li class="nav-item pr-2">
+                <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"><i class="fas fa-home"></i></a>
+            </li>
+            <button class="btn-add"><i class="fas fa-plus"></i></button>
+        </ul>
+    </div>
+ 
+    <div class="container-fluid pt-5 px-0">
+        <router-outlet></router-outlet>
+    </div>
+     

@@ -1,0 +1,337 @@
+
+<div class="container p-0 mw-100">
+    <div class="logo-block">
+            <img  src="../../../../assets/img/imglogo.png" alt="">
+            <p class="m-0" style="color: white;">Logo</p>
+    </div>
+    <div class="uk-position-relative uk-visible-toggle uk-light bg-image" tabindex="-1" uk-slider>
+            <ul class="uk-slider-items uk-grid">
+                <li class="uk-width-4-3">
+                    <div class="uk-panel">
+                        <img  src="{{platinumlisting.imageUrl}}" alt="">
+                        <div class="uk-position-center uk-text-center">
+                            <h1 uk-slider-parallax="x: 100,-100"> {{platinumlisting.name}} </h1>
+                            <p uk-slider-parallax="x: 200,-200">{{platinumlisting.description}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-3">
+                    <div class="uk-panel">
+                        <img  src="{{platinumlisting.imageUrl}}" alt="">
+                        <div class="uk-position-center uk-text-center">
+                            <h1 uk-slider-parallax="x: 100,-100">{{platinumlisting.name}} </h1>
+                            <p uk-slider-parallax="x: 200,-200">{{platinumlisting.description}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-3">
+                    <div class="uk-panel">
+                        <img  src="{{platinumlisting.imageUrl}}" alt="">
+                        <div class="uk-position-center uk-text-center">
+                            <h1 uk-slider-parallax="x: 100,-100">{{platinumlisting.name}}</h1>
+                            <p uk-slider-parallax="x: 200,-200">{{platinumlisting.description}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    </div>
+    <div class="menu-container">
+            <div class="menu" (click)="currentMenu='home'" [class.selectedMenu]="currentMenu=='home'">
+                <a>Home</a>
+            </div>
+            <div class="menu" (click)="currentMenu='gallery'" [class.selectedMenu]="currentMenu=='gallery'">
+                <a>Gallery</a>
+            </div>
+            <div class="menu" (click)="currentMenu='products'" [class.selectedMenu]="currentMenu=='products'">
+                <a>Products</a>
+            </div>
+            <div class="menu" (click)="currentMenu='services'" [class.selectedMenu]="currentMenu=='services'">
+                <a>Services</a>
+            </div>
+            <div class="menu" (click)="currentMenu='reviews'" [class.selectedMenu]="currentMenu=='reviews'">
+                <a>Reviews</a>
+            </div>
+    </div>
+    <div *ngIf="currentMenu=='home'" class="detail-about " >
+            <div class="detail-view mr-lg-3 ">
+                    <h2 style="color: #454F63;">About Us</h2>
+                    <p class="about-para"> {{platinumlisting.about}} </p>
+                    <div class="add-button">
+                        <button class=" uk-button-default uk-margin-small-right btn btn-primary mt-3 submi-button" uk-toggle="target: #modal-example">Ask A Question</button>
+                    </div>
+                    <div id="modal-example" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <form  (ngSubmit)="submit()" [formGroup]="platinumForm">
+                                <div>
+                                    <p class="heading-label"><span>Ask</span>A Question</p>
+                                </div>
+                                <div class="name-label">
+                                    <label class="fonts">Name</label>
+                                </div>
+                                <div class="text-area">
+                                    <input type="text" placeholder="Enter Your Name" class="text-space" required
+                                    formControlName="name">
+                                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="name.errors.required" class="err-font">
+                                        Name is required.
+                                        </div>
+                                     </div>
+                                </div>
+                                 
+                                <div class="name-label">
+                                    <label class="fonts">Email</label>
+                                </div>
+                                <div class="text-area">
+                                    <input type="text" placeholder="Enter Your Email" class="text-space" required
+                                    formControlName="email">
+                                    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="email.errors.required" class="err-font">
+                                        Email is required.
+                                        </div>
+                                        <div *ngIf="email.errors.pattern" class="err-font">
+                                            You have entered an invalid e-mail address. 
+                                           </div>
+                                         </div>
+                                </div>
+                                 
+                                <div class="name-label">
+                                    <label class="fonts">Message</label>
+                                </div>
+                                <div class="text-area mb-1">
+                                    <textarea class="message-area" required
+                                    formControlName="msg"></textarea>
+                                    <div *ngIf="msg.invalid && (msg.dirty || msg.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="msg.errors.required" class="err-font">
+                                        Message is required.
+                                        </div>
+                                     </div>
+                                </div> 
+                                <div class="button-block">
+                                    <button class="btn btn-primary mt-3 send-button" (click)="submit">Submit<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                                    <div  class="error-message mt-3">
+                                        <label *ngIf="errorMessage" for="">{{errorMessage}}</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="bus-timing-view ml-lg-3">
+                    <div class="bus-detail-heading" >
+                        <h2 class="" style="color: #454F63;">BUSINESS DETAILS</h2>
+                    </div>
+                    <div class="d-flex w-100 my-2">
+                        <div class="detail-time"><i class="far fa-clock mr-2"></i>Opening Time:</div>
+                        <div class="detail-sub-time ">{{platinumlisting.openingTime | date:'shortTime'}}</div>
+                    </div>
+
+                    <div class="d-flex w-100 my-2">
+                        <div class="detail-time"><i class="far fa-clock mr-2"></i>Closing Time:</div>
+                        <div class="detail-sub-time ">{{platinumlisting.closingTime | date:'shortTime'}}</div>
+                    </div>
+
+                    <div class="d-flex w-100 my-2">
+                        <div class="detail-time"><i class="far fa-calendar-minus mr-2"></i>Working Days:</div>
+                        <div class="detail-sub-time  ">{{platinumlisting.workingDays}}</div>
+                    </div>
+                    <div class="d-flex w-100 my-2">
+                        <div class="detail-time"><i class="fa fa-map-marker mr-2"></i>Location:</div>
+                        <div class="detail-sub-time  ">First Floor,Parappil Building<br>Vannapuram Street,Nearest Brutec Pharma<br>Thodupuzha,Idukki<br>Kerala,India<br>Pin:673015</div>
+                    </div>
+            </div>
+    </div>
+    <div *ngIf="currentMenu=='gallery'" class="gallery-view " >
+            <div class="big-image">
+                <img  src="{{selectedGalleryImageUrl}}" alt="">
+            </div>
+            <div class="slider-image">
+                <div uk-slider>
+
+                    <div class="uk-position-relative">
+                
+                        <div class="uk-slider-container uk-light">
+                            <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-3@s uk-child-width-1-4@m ">
+                                <li class="gallery-list" *ngFor="let galleryImage  of platinumlisting.galleryImageUrls;let i=index;" (click)="galleryImageChanged(i)">
+                                    <img  src="{{galleryImage}}" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <div class="uk-hidden@s uk-light">
+                            <a class="uk-position-center-left uk-position-small svg-pre-bt " href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small svg-nex-bt " href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                
+                        <div class="uk-visible@s">
+                            <a class="uk-position-center-left uk-position-small svg-pre-bt" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small svg-nex-bt" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                
+                    </div>
+                
+                    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                
+                </div>
+            </div>
+    </div>
+    <div  *ngIf="currentMenu=='products'" class="uk-position-relative uk-visible-toggle uk-light product-view "  tabindex="-1" uk-slider>
+
+                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                    <li class="img-container">
+                        <div class="uk-panel img-block">
+                            <img  src="../../assets/img/racer.png" alt="">
+                            <p class="heading-para">Daniel</p>
+                            <p class="product-para">Lorem ipsum dolor sit amet </p>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <div class="uk-panel img-block">
+                            <img  src="../../assets/img/road.png" alt="">
+                            <p class="heading-para">Daniel</p>
+                            <p class="product-para">Lorem ipsum dolor sit amet </p>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <div class="uk-panel img-block">
+                            <img  src="../../assets/img/town.png" alt="">
+                            <p class="heading-para">Daniel</p>
+                            <p class="product-para">Lorem ipsum dolor sit amet </p>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <div class="uk-panel img-block">
+                            <img  src="../../assets/img/racer.png" alt="">
+                            <p class="heading-para">Daniel</p>
+                            <p class="product-para">Lorem ipsum dolor sit amet </p>>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <div class="uk-panel img-block">
+                            <img  src="../../assets/img/road.png" alt="">
+                            <p class="heading-para">Daniel</p>
+                            <p class="product-para">Lorem ipsum dolor sit amet </p>
+                        </div>
+                    </li>
+                </ul>
+            
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover slider-btn" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover slider-btn" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            
+    </div>
+    <div  *ngIf="currentMenu=='services'" class="service-view" >
+        <div class="service-block mr-lg-3">
+                    <div class="heading-title">
+                        <p class="service-head">Lorem ipsum</p>
+                        <p class="service-subhead">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="service-sub">
+                        <p class="service-para">
+                            Lorem ipsum dolor sit amet, consetetur
+                            sadipscing elitr, sed diam nonumy eirmod
+                            tempor invidunt ut labore et dolore magna
+                            aliquyam erat, sed diam voluptua. At vero
+                            eos et accusam et justo duo dolores et ea
+                            rebum. Stet clita kasd gubergren, no sea
+                            takimata sanctus est Lorem ipsum dolor sit
+                            amet. Lorem ipsum dolor sit amet, consetetur
+                            sadipscing elitr, sed diam nonumy eirmod
+                            tempor invidunt ut labore
+                        </p>
+                    </div>
+     </div> 
+    </div>
+    <div *ngIf="currentMenu=='reviews'" class="review-view " >
+            <div class="review-main-block">
+                 <div  class="review-sub-block">
+                    <img src="../../assets/img/rev-star.png" alt="">
+                    <div class="review__detail">
+                        <div class="rating-block">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="date-block">
+                                <p class="date-para">10 DEC,2020</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class=" m-0 rev-name">Jane Doe</p>
+                            <p class= " m-0 review__detail--detail">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod
+                            </p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="button-view">
+                <div class="add-button">
+                    <button class=" uk-button-default uk-margin-small-right btn btn-primary mt-3 submi-button" uk-toggle="target: #modal-example">Add Your Review</button>
+                </div>
+            </div>
+    </div>   
+    <div class="bottom-title-view">
+            <div class="title-text">
+                <p style="font-size:x-large;">Lorem ipsum dolor</p>
+                <p>Lorem ipsum dolor sit
+                    amet, consetetur
+                    sadipscing elitr, sed
+                </p>
+                <p>Lorem ipsum dolor sit amet, consetetur</p>
+            </div>
+            <div class="contact-block">
+                <div>
+                    <a class="con-det">CONTACT US</a>
+                </div>
+                <div class="contact-view">
+                    <div class="call-button">
+                        <a class="call-bt"><img src="../../assets/img/call.png" alt="" class="call-img"></a>
+                    </div>
+                    <div class="num-view">
+                        <p class="num-bt">+91 9895 555 111</p>
+                    </div>
+                </div>
+                <div class="map-block">
+                    <img src="../../assets/img/map.jpg" alt="" class="map-img">
+                </div>
+            </div>
+            <div class="follow-block">
+                <div class="follow-title">
+                    <a class="con-det">FOLLOW US</a>
+                </div>
+                <div class="followlogo-block">
+                    <div class="follow-view1">
+                        <div class="follow-logo">
+                            <a class="call-bt"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="follow-name">
+                            <p class="num-bt">Facebook</p>
+                        </div>
+                    </div>
+                    <div class="follow-view2">
+                        <div class="follow-logo">
+                            <a class="call-bt"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="follow-name">
+                            <p class="num-bt">Instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>   
+</div>
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <app-new-review-modal></app-new-review-modal>
+    </div>
+</div>
+    
+

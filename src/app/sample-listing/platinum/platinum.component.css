@@ -1,0 +1,613 @@
+.container{
+    background-color: #F2F2F2;
+}
+.logo-block{
+    background-color: #09123B;
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+}
+.bg-image{
+    margin-top: 1rem;
+    width: 100%;
+
+    
+}
+.menu-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #727C8E;
+    font-size: large;
+    border-radius: 0px 0px 20px 20px;
+    background-color: white;
+    padding: 1rem;
+    margin: 0;
+}
+.menu{
+    border-radius: 10px;
+    padding:0 1rem;
+}
+.menu:hover{
+    background-color: #FF6969;
+    color: #ffff;
+}
+.selectedMenu:hover{
+    background-color: #FF6969; 
+    color: #ffff;
+}
+
+.detail-about{
+    display: flex;
+    margin: 2.5rem;   
+}
+.detail-view{
+    background-color: #ffff;
+    color: #0000;
+    width: 50%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.bus-timing-view{
+    background-color: #ffff;
+    color:b#78849E; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+}
+.detail-time{
+    width: 50%;
+}
+.detail-sub-time{
+    width: 50%;
+}
+.about-para{
+    line-height: 2.3rem;
+    color:#78849E;
+    font-size: small;
+}
+.detail-time{
+    color:#78849E; 
+}
+.detail-sub-time{
+    color:#3ACCE1 ;
+}
+.gallery-view{
+    margin: 2.5rem;
+}
+.big-image{
+    text-align: center;
+}
+.slider-image{
+    margin-top: 3rem;
+    text-align: center;
+}
+.product-view{
+    margin: 2.5rem;
+}
+.product-para{
+    color: #727C8E;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+.slider-btn{
+    background-color:black;
+    border-radius: 50px;
+    color: white;
+    padding: .5rem;
+    height: 40px;
+    width: 40px;
+}
+.heading-para{
+    color: black;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+.heading-title{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 1.5rem;
+}
+.service-view{
+    display: flex;
+    justify-content: space-around;
+    margin: 2.5rem;
+}
+.service-sub{
+    background-color: #ffff;
+
+}
+.service-para{
+    color:#727C8E ;
+    padding: 1rem;
+}
+.service-head{
+    font-size: large;
+    margin: 0;
+}
+.service-subhead{
+    font-size: smaller;
+    margin: 0;
+    font-weight: lighter;
+}
+.review-main-block{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.review-view{
+    text-align: left;
+    margin: 2.5rem;
+    flex-direction: row;  
+  }
+  .review-sub-block img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 1px solid #FF6969;
+  }
+  .review-sub-block{
+      display: flex;
+      width: 40%;
+      margin-right: 4rem;
+      margin-bottom: 3rem;
+      color: #515C6F;
+  }
+  .rev-name{
+      font-weight: bold;
+  }
+ 
+  .review-text{
+      width: 50%;
+      height: 200px;
+      margin-top: 20px;
+      border-radius: 0%;
+      margin-left: 7rem; 
+      margin-bottom: 1rem;   
+  }
+ .review__detail--date{
+     margin-top: 10px;
+ }
+ .rating-block{
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 0;
+     width: 100%;
+ }
+ .date-para{
+     font-weight: normal;
+     font-size: small;
+ }
+ .rating {
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .rating i.fas {
+    color: #FF6969;
+  }
+  
+  .rating-info {
+    margin-left: 10px;
+  }
+ .input-text{
+    width: 67%;
+    height: 90%; 
+    background-color:#F5F5F5 ;
+    padding-left: 1rem;
+    
+
+}
+
+
+.edit-bt{
+    background-color:#287587 ;
+    border-color:none;
+    padding: 10px;
+   
+}
+.add-bt{
+    background-color:#008081 ;
+    color: white;
+    border-color:none;
+    padding: 10px;
+ 
+}
+.edit-img{
+    width: 15px;
+    height: 15px;
+}
+.bottom-title-view{
+    background-color:#09123B;
+    display: flex;
+    justify-content: space-around;
+    color: #CCCCCC;
+    padding: 2rem;
+    font-size: small;
+    flex-direction: row;
+    margin-top: 2rem;
+    height: 100%;
+}
+.contact-block{
+    display: flex;
+    flex-direction: column;
+}
+.contact-view{
+    display: flex;
+    text-align: center;
+    margin-top: 1rem;
+}
+.call-button{
+    width: 30px;
+    height: 30px;
+}
+.follow-logo{
+    width: 25px;
+    height: 25px;
+
+}
+.gallery-list{
+    width: 150px;
+    height: 125px;
+    margin: 0 1rem;
+}
+.svg-pre-bt{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+.svg-nex-bt{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-left: 1rem 0;
+}
+.con-det{
+    color: #7ABFC6;
+}
+.map-block{
+    margin-top: 1rem;
+}
+.map-img{
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+.num-view{
+    margin-left: 1rem;
+}
+.follow-block{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.follow-view1{
+    display: flex;
+}
+.follow-view2{
+    display: flex;
+}
+.follow-name{
+    margin-left: 1rem;
+}
+.follow-title{
+    margin-bottom: 1rem;
+}
+.con-det{
+    font-size: medium;
+}
+.followlogo-block{
+    display: flex;
+    flex-direction: column;
+
+}
+.submi-button{
+    width: 160px;
+    color: white;
+  }
+
+ /* ask a question */
+
+ .text-area{
+    margin-bottom: 2rem;
+    width: 100%;
+  
+  
+    
+  }
+  .question-block{
+    border-left: 1px solid #ABABAB ;
+    padding-left: 5rem;
+    padding-right: 3rem;
+  
+  }
+  .message-area{
+    width: 100%;
+    height: 150px;
+  }
+  .send-button{
+    width: 150px;
+  
+  }
+  .text-space{
+    padding: 1rem;
+    font-size: small;
+    width: 100%;
+    height: 20px;
+  }
+  .fonts{
+    font-size: small;
+  }
+  .heading-label{
+    color: #33CA88;
+    font-size: larger;
+  }
+  
+  .heading-label span{
+    color: black;
+    border-bottom: 2px solid #33CA88;
+    font-weight: bold;
+  }
+  .botom-title-view{
+    display: flex;
+    background-color:#232D3B ;
+    justify-content: space-between;
+    color: white;
+    margin-top: 50px;
+    align-items: center;
+    padding: 4rem;
+    font-size: small;
+    
+    
+    
+  }
+  .child1{
+    width: 300px;
+    
+  }
+  .child6{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .sub-child6{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .sub1-child6{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .icon-img{
+    width: 40px;
+    height: 40px;
+    
+  }
+  .date-para{
+   font-weight: 200;
+  }
+  .alert {
+    border: 0;
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0.5rem;
+    color: rgb(119, 109, 109)(119, 109, 109);
+    font-size: smaller;
+  }
+  .error-message {
+    color: black;
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+    .detail-about{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin: 2rem;  
+    } 
+    .detail-view{
+        margin-bottom: 2rem;
+        width: 100%;
+        margin-right: 0;
+    }
+    .bus-timing-view{
+        width: 100%;
+        margin-left: 0;
+    }
+    .gallery-view{
+        margin: 2rem;
+    }
+    .product-view{
+        margin: 2rem;
+    }
+    .img-block{
+        width: 100%;
+    }
+    .service-block{
+        margin-bottom: 2rem;
+    }
+    .bottom-title-view{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem;
+       
+    }
+    .contact-block{
+        order: -1;
+        flex: 1 0 100%;
+        margin-bottom: 1rem;
+    }
+    .service-view{
+        display: flex;
+        flex-direction: column;
+    }
+    .service-block{
+        width: 100%;
+    }
+    .review-view{
+        margin: 2rem;
+    }
+    .review-text{
+       width: 95%;
+       margin-left: 5rem;
+    }
+    .button-view{
+        margin-left: 5rem;
+    }
+    .review__detail{
+        flex: auto;
+    }
+    .review-sub-block{
+        width: 100%;
+    }
+    .input-text{
+        width: 75%;
+    }
+    .about-para{
+        line-height: 1.5rem;
+    }
+    .follow-block{
+        padding-right: 10rem;
+    }
+    .review-sub-block{
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    
+    
+}
+
+@media (max-width: 768px) {
+    .rating-block{
+        width: 100%;
+    }
+    .img-container{
+        width: 75%;
+        padding: 0;
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+    .img-block{
+        padding: 1rem;
+        margin-right: 0;
+    }
+    .followlogo-block{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: start;
+    }
+    .follow-block{
+        width: 100%;
+    }
+    .follow-view2{
+        margin-left: 5rem;
+    }
+    
+  
+}
+
+@media (max-width: 576px) {
+    .menu-container{
+        overflow-x: scroll;
+        padding-left: 1rem;
+        padding-right: 2rem;
+        justify-content: start;
+    }
+    .menu{
+        margin-right: 1rem;
+    }
+    .detail-about{
+        padding: 1rem;
+    }
+    .detail-view {
+        padding: 1rem;
+    }
+    .bus-timing-view{
+        padding: 1rem;
+        font-size: small;
+    }
+    .service-block{
+        margin-bottom: 2rem;
+    }
+    .review-view{
+        margin-top: 50px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media (max-width: 400px) {
+    .detail-about{
+        margin:0rem;
+    }
+    .bus-timing-view {
+        font-size: small;
+    }
+    .review-view{
+        padding: 0;
+        margin: 1rem;
+    }
+    .review-text{
+        margin-left: 0;
+        width: 100%;
+        margin-right: 0;
+    }
+    .input-text{
+        width: 100%;
+    }
+    .button-view{
+        margin-left: 0;
+    }
+    .follow-view2{
+        margin-left: 1rem;
+    }
+    .detail-sub-time{
+        margin-left: .5rem !important;
+    }
+    .follow-block{
+        padding-right: 0;
+    }
+    .gallery-view{
+        margin: 1rem;
+    }
+    .product-view{
+        margin: 1rem;
+    }
+    .bottom-title-view{
+        padding: 1rem;
+    }
+    .service-view{
+        margin: 1rem;
+    }
+
+}
+@media (max-width: 300px) {
+    
+
+}

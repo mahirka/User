@@ -1,0 +1,239 @@
+.featured-list {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #000;
+    padding: 50px;
+  }
+  
+  .featured-list__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+    padding-left: 15px;
+  }
+  
+  .featured-list__title--title {
+    font-size: 34px;
+    color: #fff;
+  }
+  
+  .featured-list__title--control {
+    width: 130px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .featured-list__title--control .col {
+    padding: 0px 10px;
+  }
+  
+  .featured-list__title--control .col .next, .featured-list__title--control .col .previous {
+    width: 100%;
+    padding-top: 91%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .featured-list__title--control .col .next i, .featured-list__title--control .col .previous i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 22px;
+  }
+  
+  .featured-list__title--control .col .next svg, .featured-list__title--control .col .previous svg {
+    display: none;
+  }
+  
+  .featured-list__card-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  
+  .featured-list__card {
+    padding: 10px;
+  }
+  
+  .featured-list__card .card {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #222222;
+    position: relative;
+    border: none;
+  }
+  
+  .featured-list__card .card .strip {
+    top: 0px;
+    left: 0px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-49.07%, #008081), color-stop(103.09%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, #008081 -49.07%, rgba(255, 255, 255, 0) 103.09%);
+  }
+  
+  .featured-list__card .card .img-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+  }
+  
+  .featured-list__card .card .img-holder img {
+    width: 100%;
+  }
+  
+  .featured-list__card .card .info-holder {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 15px;
+    color: #fff;
+  }
+  
+  .featured-list__card .card .info-holder .rating {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    color: #FF3A5D;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 15px;
+  }
+  
+  .featured-list__card .card .info-holder .rating .rating-info {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .featured-list__card .card .info-holder .rating .rating-info span {
+    margin-right: 5px;
+  }
+  
+  .featured-list__card .card .info-holder .card-title {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .featured-list__card .card .info-holder .card-subtitle {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+  .featured-list__card .card .info-holder .card-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .featured-list__card .card .info-holder .card-detail .detail {
+    max-width: 80%;
+    font-size: 14px;
+  }
+  
+  .featured-list__card .card .info-holder .card-detail .detail label {
+    display: block;
+  }
+  
+  .featured-list__card .card .info-holder .card-detail .img {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+  
+  .featured-list__card .card .info-holder .card-detail .img img {
+    width: 60px;
+  }
+  /*# sourceMappingURL=featured.css.map */

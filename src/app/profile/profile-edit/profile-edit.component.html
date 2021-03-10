@@ -1,0 +1,119 @@
+<form (ngSubmit)="submit()" [formGroup]="updateForm">
+    <div class="container">
+        <div class="profile-view">
+            <div class="profile-title">
+                <div class="heading-tag">
+                    <p>Edit Profile</p>
+                </div>
+                <div class="edit-area">
+                   
+                </div>
+            </div>
+            <div class="pro-img">
+                <img class="pro-pic" src="{{profilePic}}"  onerror="this.src='../../../assets/img/avatar1.png'" alt="">
+                <div class="upload-bt">
+                    <div class="add-bt">
+                        <img src="../../../../assets/img/camera-icon.png">
+                    </div>
+                    <div class="upadte-label">
+                        <a class="  uk-margin-small-right " uk-toggle="target: #modal-upload">Update Photo</a>
+                    </div>
+                    <div id="modal-upload" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body upload-block">
+                            <div class="heading">
+                                <h3>Update Photo</h3>
+                            </div>
+                            <div class="profile-pic-container mt-3" (click)="[isProfilePicCropped = true ,mediaInput.click()]">
+                                <img  class="card-img upload-pic" id="itemIcon" onerror="this.src='../../../assets/img/avatar1.png'"
+                                [src]="modalProfilePic">
+                                <image-cropper *ngIf="isProfilePicCropped" [imageChangedEvent]="profilePicChangedEvent"
+                                 [maintainAspectRatio]="true" [aspectRatio]="4 / 4" format="png" (imageCropped)="profilePicCropped($event)"
+                                  (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()">
+                                </image-cropper>
+                            </div>
+                            <div class="bt-block mt-3">
+                                <a for="" class="subtitle" (click)="mediaInput.click()">Choose a File</a>
+                                <input type="file" style="display: none;" (change)="previewProfilePic($event)" accept='image/*' name="picture"
+                                  #mediaInput required>
+                            </div>
+                            <div class="error-message mt-3">
+                                <label *ngIf="errorMessage" for="">{{errorMessage}}</label>
+                            </div>
+                            <div class="button-block">
+                                <button class="btn btn-primary mt-3 update-button" (click)="uploadProfilePic()">Update<i *ngIf="isLoading"
+                                    class="fa fa-spin fa-spinner"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-view">
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Full Name</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Enter your name" class="text-area" required
+                            formControlName="name">
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                                class="alert alert-danger">
+
+                                 <div *ngIf="name.errors.required" class="err-font">
+                                    Name is required.
+                                </div>
+                                 <div *ngIf="name.errors.minlength" class="err-font">
+                                   Name must be at least 4 characters long.
+                                 </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Mobile</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Enter Your Mob.no" class="text-area" formControlName="mobile" required>
+                            <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="mobile.errors.required" class="err-font">
+                                    Mob.no is required.
+                                </div>
+                                <div *ngIf="mobile.errors.pattern" class="err-font">
+                                   Mob.no must be atleast 10 digits 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+                <div class="edit-mainblock">
+                    <div class="edit-block">
+                        <div class="name-label">
+                            <p>Email</p>
+                        </div>
+                        <div class="text-block">
+                            <input type="text" placeholder="Enter your Email Id" class="text-area" formControlName="email" required>
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                               class="alert alert-danger">
+
+                               <div *ngIf="email.errors.required" class="err-font">
+                                 E-mail is required.
+                                </div>
+                               <div *ngIf="email.errors.pattern" class="err-font">
+                                 You have entered an invalid e-mail address. 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-main-block">
+                    <div class="button-block">
+                        <button class="btn btn-primary mt-3 save-button" (click)="submit()">Save<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                        <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+</form>

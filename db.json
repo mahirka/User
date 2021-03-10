@@ -1,0 +1,74 @@
+{
+    "freeListings":[
+        {
+            "id":1,
+            "name":"Hamrut PVT LTD",
+            "description":"lorem ipsum dummy text"
+        },
+        {
+            "id":2,
+            "name":"BASSAM INFOTECH",
+            "description":"lorem ipsum dummy text"
+        }
+    ],
+    "silverListings":[
+        {
+            "id":1,
+            "name":"COLOURFUL cash n carry",
+            "description":"lorem ipsum dummy text"
+        },
+        {
+            "id":2,
+            "name":"SMART GIRL",
+            "description":"lorem ipsum dummy text"
+        }
+    ],
+    "goldListings":[
+        {
+            "id":1,
+            "name":"WAGONMART",
+            "description":"lorem ipsum dummy text"
+        },
+        {
+            "id":2,
+            "name":"BLUE DART",
+            "description":"lorem ipsum dummy text"
+        }
+    ],
+    "otherListings":[
+        {
+            "id":1,
+            "name":"SONY",
+            "description":"lorem ipsum dummy text"
+        },
+        {
+            "id":2,
+            "name":"LG",
+            "description":"lorem ipsum dummy text"
+        }
+    ],
+    "diamondListings":[
+        {
+            "id":1,
+            "name":"SKYLINE",
+            "description":"lorem ipsum dummy text"
+        },
+        {
+            "id":2,
+            "name":"GALAXY",
+            "description":"lorem ipsum dummy text"
+        }
+    ],
+    "platinumListings":[
+        {
+            "id":1,
+            "name":"Ferrari",
+            "description":"lorem ipsum dummy text"
+        },
+        {
+            "id":2,
+            "name":"BMW",
+            "description":"lorem ipsum dummy text"
+        }
+    ]
+}

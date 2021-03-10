@@ -1,0 +1,38 @@
+<form  (ngSubmit)="submit()" [formGroup]="loginForm">
+<label class="logsign__container--title" for="">LOG IN</label>
+<label class="logsign__container--subtitle" for="">Welcome back! Please login to your account.</label>
+    <div class="form-group logsign__container--form-group">
+        <input type="tel" placeholder="Mobile Number" class="form-control" formControlName="mobile" required>
+        <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)"
+            class="alert alert-danger">
+
+           <div *ngIf="mobile.errors.required" class="err-font">
+           Mob.no is required.
+           </div>
+            <div *ngIf="mobile.errors.pattern" class="err-font">
+             Mob.no must be atleast 10 digits 
+            </div>
+         </div> 
+    </div>
+    <div class="form-group logsign__container--form-group">
+        <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="alert alert-danger">
+
+            <div class="err-font">
+                Password must contain atleast 6 characters,
+                including upper/lowercase and numbers.
+            </div>
+         </div>
+    </div>
+    <div class="form-group form-check logsign__container--form-group my-4">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Login by OTP</label>
+        <a [routerLink]="['/authentication/forgotpassword']" routerLinkActive="router-link-active" style="float: right;"  class="text-right" ><b>ForgotPassword?</b></a>
+    </div>
+    <div class="d-flex flex-wrap align-items-center justify-content-between pt-3">
+        <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+        <button class="btn bg-main w-100 mt-2" style="background-color: #008081;color: white;"  (click)='submit()' >Log In<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+        <label for="" class="account_detail">Don't have an account? <a [routerLink]="['/authentication/register']" routerLinkActive="router-link-active" class="text-right" ><b>Sign Up</b></a></label>
+    </div>
+    </form>

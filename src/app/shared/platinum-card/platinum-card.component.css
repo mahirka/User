@@ -1,0 +1,96 @@
+.uk-slider-container ul.uk-slider-nav.uk-dot {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0;
+  }
+  
+  .info-holder {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 15px;
+    color: #fff;
+  }
+  
+  .info-holder .rating {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    color: #FF3A5D;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 15px;
+  }
+  
+  .info-holder .rating .rating-info {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .info-holder .rating .rating-info span {
+    margin-right: 5px;
+  }
+  
+  .info-holder .card-title {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .info-holder .card-subtitle {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+  .card-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 200px;
+    margin-top: -30px;
+  }
+  
+  .card-detail .detail {
+    max-width: 80%;
+    font-size: 14px;
+  }
+  
+  .card-detail .detail label {
+    display: block;
+  }
+  
+  .card-detail .img {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+  
+  .card-detail .img img {
+    width: 60px;
+  }
+  /*# sourceMappingURL=slider.css.map */

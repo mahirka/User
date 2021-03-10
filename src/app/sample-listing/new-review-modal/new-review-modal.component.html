@@ -1,0 +1,56 @@
+<form  (ngSubmit)="submit()" [formGroup]="silverForm">
+    <div>
+        <p class="heading-label"><span>Add</span> Your Review</p>
+    </div>
+    <div class="name-label">
+        <label class="fonts">Name</label>
+    </div>
+    <div class="text-area">
+        <input type="text" placeholder="Enter Your Name" class="text-space" required
+        formControlName="name">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+             class="alert alert-danger">
+            <div *ngIf="name.errors.required" class="err-font">
+            Name is required.
+            </div>
+         </div>
+    </div>
+     
+    <div class="name-label">
+        <label class="fonts">Email</label>
+    </div>
+    <div class="text-area">
+        <input type="text" placeholder="Enter Your Email" class="text-space" required
+        formControlName="email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+             class="alert alert-danger">
+            <div *ngIf="email.errors.required" class="err-font">
+            Email is required.
+            </div>
+            <div *ngIf="email.errors.pattern" class="err-font">
+                You have entered an invalid e-mail address. 
+               </div>
+             </div>
+    </div>
+     
+    <div class="name-label">
+        <label class="fonts">Message</label>
+    </div>
+    <div class="text-area mb-1">
+        <textarea class="message-area" required
+        formControlName="msg"></textarea>
+        <div *ngIf="msg.invalid && (msg.dirty || msg.touched)"
+             class="alert alert-danger">
+            <div *ngIf="msg.errors.required" class="err-font">
+            Message is required.
+            </div>
+         </div>
+    </div> 
+    <div class="button-block">
+        <button class="btn btn-primary mt-3 send-button" (click)="submit">Submit<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+        <div  class="error-message mt-3">
+            <label *ngIf="errorMessage" for="">{{errorMessage}}</label>
+        </div>
+    </div>
+</form>
+

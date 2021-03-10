@@ -1,0 +1,124 @@
+<div class="container-fluid p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <label for="" class="plan-card__title">Free</label>
+                    <label for="" class="plan-card__subtitle pb-4 border-bottom">Lorem ipsum dolor sit amet,</label>
+                    <div class="plan-card__detail">
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Custom Templates ( single page )</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Recommendation</span>
+                        </label>
+                    </div>
+                    <button class="btn-secondary btn badge-pill"  (click)="selectPlan('free')">
+                        Select Plan
+                    </button>
+                    <a class="plan-card__link" href="#">Terms and Conditions apply.</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <label for="" class="plan-card__title">Basic</label>
+                    <label for="" class="plan-card__subtitle pb-4 border-bottom">Lorem ipsum dolor sit amet, </label>
+                    <div class="plan-card__detail">
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Logo</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Custom Templates ( premium )</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Recommendation</span>
+                        </label>
+                    </div>
+                    <button class="btn-secondary btn badge-pill"  (click)="selectPlan('basic')">
+                        Select Plan
+                    </button>
+                    <a class="plan-card__link" href="#">Terms and Conditions apply.</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <label for="" class="plan-card__title">Silver</label>
+                    <label for="" class="plan-card__subtitle pb-4 border-bottom">Lorem ipsum dolor sit amet, </label>
+                    <div class="plan-card__detail">
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Custom title</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Logo</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Custom Templates ( premium )</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Recommendation</span>
+                        </label>
+                    </div>
+                    <button class="btn-secondary btn badge-pill"  (click)="selectPlan('silver')">
+                        Select Plan
+                    </button>
+                    <a class="plan-card__link" href="#">Terms and Conditions apply.</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <label for="" class="plan-card__title">Gold</label>
+                    <label for="" class="plan-card__subtitle pb-4 border-bottom">Lorem ipsum dolor sit amet, </label>
+                    <div class="plan-card__detail">
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Slogan words</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Custom title</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Logo</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Custom Templates ( premium )</span>
+                        </label>
+                        <label for="" class="plan-card__detail--item">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Recommendation</span>
+                        </label>
+                    </div>
+                    <button class="btn-secondary btn badge-pill" (click)="selectPlan('gold')">
+                        Select Plan
+                    </button>
+                    <a class="plan-card__link" href="#">Terms and Conditions apply.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body logout-block">
+        <div class="para">
+            
+            <p>Are You Sure?</p>
+        </div>
+        <div class="bt-block">
+            <button class=" uk-modal-close modal-button sub-bt mr-2">No</button>
+            <button class="uk-modal-close modal-button sub-bt1" (click)="savePlan()">Yes</button>
+        </div>
+    </div>
+</div>
+
+

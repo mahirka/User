@@ -1,0 +1,270 @@
+
+    <div class="container py-3">
+        <div class="business-header">
+            <div class="container">
+                <div class="business-info">
+                    <label for="" class="business-info__title w-100">
+                        {{otherlisting.name}}
+                    </label>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mw-100 py-3">
+            <div class="d-flex flex-wrap business-gallery">
+                <div class="col px-p-2">
+                    <img src="../../assets/img/party.jpg" alt="">
+                </div>
+                <div class="col-xl-2 col-md-3 col-sm-4 d-sm-block d-none col-6 px-p-2">
+                    <img src="../../assets/img/part-1.jpg" alt="">
+                </div>
+                <div class="col-3 px-0 d-md-flex d-none flex-wrap">
+                    <div class="col-12 px-p-2">
+                        <img src="../../assets/img/party-2.jpg" alt="">
+                    </div>
+                    <div class="col-12  px-p-2">
+                        <img src="../../assets/img/party-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2 px-0 flex-wrap d-xl-flex d-none">
+                    <div class="col-12  px-p-2">
+                        <img src="../../assets/img/party-2.jpg" alt="">
+                    </div>
+                    <div class="col-12  px-p-2">
+                        <img src="../../assets/img/party-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 mb-3">
+                <div class="card-detail">
+                    <label for="" class="card-detail--title">
+                        About
+                    </label>
+                    <p class="card-detail--detail mb-3">
+                        {{otherlisting.about}}
+                    </p>
+                    <span class="tags">Food</span>
+                    <span class="tags">Beverage</span>
+                    <span class="tags">fun</span>
+                    <span class="tags">wifi</span>
+                    <label for="" class="card-detail--title pt-4">
+                        Contact and Social Media
+                    </label>
+                    <div class="social-icon">
+                        <img src="../../assets/img/icons/call.svg" alt="">
+                        <label for="">Call Now</label>
+                    </div>
+                    <div class="social-icon">
+                        <img src="../../assets/img/icons/message.svg" alt="">
+                        <label for="">Direct Message</label>
+                    </div>
+                    <div class="social-icon">
+                        <img src="../../assets/img/icons/whatsapp.svg" alt="">
+                        <label for="">Whatsapp</label>
+                    </div>
+                    <div class="social-icon">
+                        <img src="../../assets/img/icons/facebook.svg" alt="">
+                        <label for="">Facebook</label>
+                    </div>
+                    <div class="social-icon">
+                        <img src="../../assets/img/icons/instagram (1).svg" alt="">
+                        <label for="">Instagram</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-3">
+                <div class="card-detail">
+                    <label for="" class="card-detail--title mb-3">
+                        Business Timing
+                    </label>
+                    <div class="shedule-details">
+                        <div class="d-flex align-items-start">
+                            <i class="far fa-clock col"></i>
+                            <label for="">
+                                Opening Time:
+                                <br>
+                                <span>{{otherlisting.openingTime | date:'shortTime'}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="shedule-details">
+                        <div class="d-flex align-items-start">
+                            <i class="far fa-clock col"></i>
+                            <label for="">
+                                Closeing Time:
+                                <br>
+                                <span>{{otherlisting.openingTime | date:'shortTime'}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="shedule-details">
+                        <div class="d-flex align-items-start">
+                            <i class="far fa-calendar-minus col"></i>
+                            <label for="">
+                                Working Days:
+                                <br>
+                                <span>{{otherlisting.workingDays}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="shedule-details">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-map-marker col"></i>
+                            <label for="">
+                                Location:
+                                <br>
+                                <span>First Floor,Parappil Building<br>Vannapuram Street,Nearest Brutec Pharma<br>Thodupuzha,Idukki<br>Kerala,India<br>Pin:673015</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <div class="card-detail px-0">
+                    <div class="d-flex flex-wrap">
+                        <div class="col-md-3 col-sm-6">
+                            <img class="card-detail__img" src="../../assets/img/pic-1.png" alt="">
+                            <label class="card-detail__name" for="">Daniel</label>
+                            <label class="card-detail__info" for="">Lorem ipsum dolor sit amet</label>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <img class="card-detail__img" src="../../assets/img/pic-2.png" alt="">
+                            <label class="card-detail__name" for="">Daniel</label>
+                            <label class="card-detail__info" for="">Lorem ipsum dolor sit amet</label>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <img class="card-detail__img" src="../../assets/img/pic-3.png" alt="">
+                            <label class="card-detail__name" for="">Daniel</label>
+                            <label class="card-detail__info" for="">Lorem ipsum dolor sit amet</label>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <img class="card-detail__img" src="../../assets/img/pic-4.png" alt="">
+                            <label class="card-detail__name" for="">Daniel</label>
+                            <label class="card-detail__info" for="">Lorem ipsum dolor sit amet</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <div class="card-detail">
+                    <label for="" class="card-detail--title text-dark">
+                        Reviews
+                    </label>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex w-100 border-bottom border-top review">
+                                <img src="../../assets/img/user.png" alt="">
+                                <div class="review__detail">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                                    </div>
+                                    <label for="" class="review__detail--name">Ramesh Ravi</label>
+                                    <p class="review__detail--detail">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut
+                                    </p>
+                                    <p class="review__detail--date">
+                                        Reviewed 21 December 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex w-100 border-bottom border-top review">
+                                <img src="../../assets/img/user.png" alt="">
+                                <div class="review__detail">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                                    </div>
+                                    <label for="" class="review__detail--name">Ramesh Ravi</label>
+                                    <p class="review__detail--detail">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut
+                                    </p>
+                                    <p class="review__detail--date">
+                                        Reviewed 21 December 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex w-100 border-bottom border-top review">
+                                <img src="../../assets/img/user.png" alt="">
+                                <div class="review__detail">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                                    </div>
+                                    <label for="" class="review__detail--name">Ramesh Ravi</label>
+                                    <p class="review__detail--detail">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut
+                                    </p>
+                                    <p class="review__detail--date">
+                                        Reviewed 21 December 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex w-100 border-bottom border-top review">
+                                <img src="../../assets/img/user.png" alt="">
+                                <div class="review__detail">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                                    </div>
+                                    <label for="" class="review__detail--name">Ramesh Ravi</label>
+                                    <p class="review__detail--detail">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut
+                                    </p>
+                                    <p class="review__detail--date">
+                                        Reviewed 21 December 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button class=" uk-button-default uk-margin-small-right btn btn-primary mt-3 submi-button" uk-toggle="target: #modal-example">Add Your Review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-example" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <app-new-review-modal></app-new-review-modal>
+        </div>
+    </div>
+

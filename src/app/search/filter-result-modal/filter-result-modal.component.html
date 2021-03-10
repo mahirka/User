@@ -1,0 +1,38 @@
+<div class="filter-heading">
+    <p class="heading-label"><span>Filter</span> Result</p>
+</div>
+<div class=" mb-5 uk-inline dropdown-submenu">
+    <button class="uk-button uk-button-default drop-bt" type="button">Types<i class="fa fa-caret-down nav-bar"></i></button>
+    <div uk-dropdown="mode: click">
+          <a class="dropdown-item">Automobile</a>
+          <a class="dropdown-item">Business Listing</a>
+          <a class="dropdown-item">Fashion</a>
+          <a class="dropdown-item">Job</a>
+          <a class="dropdown-item">Real Estate</a>
+    </div>
+</div>
+<div class=" mb-5 d-flex  align-items-center jusify-content-end  nav-controlers">
+    
+    <button class="btn btn-white   badge-pill px-3 " (click)="locationButton()">Location<i class="fas fa-map-marker-alt ml-3"></i></button>
+</div>
+<div class="location-box-header" [class.d-block]="isLocationBoxHeaderVisible" >
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Location">
+        <button class="btn btn-white" (click)="locationButton()"><i class="fas fa-times"></i></button>
+        <div class="location-placeholder">
+            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+            <label for="" class="location-item"><i class="fas fa-map-marker-alt mr-3"></i>Lorem ipsum dolor sit amet.</label>
+        </div>
+    </div>
+</div>
+<div class="filter-btn">
+    <div class=" mr-3 send-btn">
+        <button class=" btn btn-primary  submi-button">Cancel</button>
+    </div> 
+    <div class=" ml-1  send-btn">
+        <button class=" btn btn-primary  submi-button">Submit</button>
+    </div> 
+</div>
+

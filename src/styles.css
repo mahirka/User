@@ -1,0 +1,310 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #72727280;
+}
+
+.rounded-20 {
+  border-radius: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.shadow-main {
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #000;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #008081;
+  border-color: #008081;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #004d4e;
+  border-color: #008081;
+}
+
+.btn-secondary {
+  background-color: #33CA88;
+  border-color: #33CA88;
+}
+
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+  background-color: #29a16d;
+  border-color: #33CA88;
+}
+
+.btn-outline-primary {
+  border-color: #008081;
+  color: #008081;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:focus {
+  background-color: #004d4e;
+  border-color: #008081;
+}
+
+.btn-white {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px #d0d0d0;
+          box-shadow: 0px 0px 10px #d0d0d0;
+}
+
+.btn-white i {
+  color: #008081;
+}
+.btn-add {
+  display: block !important;
+}
+.add-mobile-button {
+  position: fixed;
+  top: 85vh;
+  z-index:1;
+  right: 20px;
+  background: #fff;
+  padding: 0px 0px 0px 20px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 0 10px #c4c4c4;
+          box-shadow: 0 0 10px #c4c4c4;
+}
+.add-mobile-button .navbar-nav  {
+  margin-right: 0px !important;
+}
+.add-mobile-button .navbar-nav  .nav-item {
+  font-size: 22px;
+  color: #33CA88;
+  padding-right: 15px !important;
+}
+.add-mobile-button .navbar-nav .nav-link {
+  color: #72727280;
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-md, .container-sm {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm {
+    max-width: 90%;
+  }
+  .w-md-50 {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .search-header-component {
+    width:48% !important;
+  }
+  
+}
+
+@media (max-width: 1240px) {
+  .search-bar {
+    width: 90% !important;
+  }
+  
+}
+
+@media (max-width: 1120px) {
+  .search-bar {
+    width: 100% !important;
+  }
+  
+}
+
+@media (max-width: 992px) {
+  .top-nav {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .top-nav .navbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .top-nav .navbar .navbar-collapse .navbar-nav {
+    padding: 10px;
+    background-color: #fff;
+  }
+  .top-nav .dropdown {
+    left: 0;
+    top: 8px;
+    border: none !important;
+  }
+  .top-nav .dropdown label {
+    display: none;
+  }
+  .top-nav .dropdown .dropdown-menu.show {
+    display: block;
+    right: inherit;
+    left: unset;
+    right:0;
+  }
+  .search-header-component .form-group, .search-header-component button {
+    border: none !important;
+  }
+  .search-bar {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .search-bar .location-box, .search-bar .category-box {
+    display: none;
+  }
+  .search-bar .search-box {
+    width: 360px !important;
+  }
+  .top-nav-secondary .dropdown.border-left {
+    border: none !important;
+  }
+  .uk-offcanvas {
+    top: -4px;
+    height: 100vh;
+  }
+  .uk-open > .uk-offcanvas-bar {
+    left: -5px;
+    height: 100vh;
+    top: 0px;
+    border-top-right-radius: 30px;
+  }
+  .side-nav-control {
+    display: block !important;
+  }
+  .search-header-component {
+    box-shadow: none;
+  background-color: #fff;
+  width: unset;
+  flex: auto;
+  margin: 0 2rem;
+  height: 38px;
+  border-radius: 0 !important;
+  padding: 8px 10px;
+  display: flex;
+  border-bottom: 1px solid #008081;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .big-card__details--title {
+    font-size: 18px !important;
+  }
+  .big-card__details--detail, .big-card__details--view {
+    font-size: 16px !important;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .plan-card__detail {
+    height: auto !important;
+    padding-bottom: 20px;
+  }
+  
+  
+  
+  .top-nav-secondary {
+    border-radius: 10px;
+    width: 98%;
+    left: 50% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 4px !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .top-header__container {
+    width: 95% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-bar {
+    width: 100% !important;
+  }
+  .search-bar .search-bar .search-box {
+    width: 280px !important;
+  }
+  .search-header-component {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  
+  .top-nav-secondary {
+    padding: 0px;
+  }
+  .top-nav-secondary .navbar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .search-bar .form-group .form-control {
+    font-size: 13px;
+    padding-top: 16px;
+  }
+  .search-bar button {
+    width: 90px !important;
+  }
+}
+@media (max-width: 360px) {
+  .search-header-component {
+    box-shadow: none;
+  background-color: #fff;
+  width: 40% !important;
+  flex: auto;
+  margin: 0 1rem !important;
+  height: 38px;
+  border-radius: 0 !important;
+  padding: 8px 10px;
+  display: flex;
+  border-bottom: 1px solid #008081;
+  }
+}
+.silver-list__title--control .col .next svg, .silver-list__title--control .col .previous svg {
+  display: none;
+}
+.featured-list__title--control .col .next svg, .featured-list__title--control .col .previous svg {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
