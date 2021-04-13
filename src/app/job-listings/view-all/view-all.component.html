@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let job of joblistings;let i=index;" class="col-lg-6 col-md-6 col-12">
+                <div class="curated-list__card">
+                    <div class="card shadow-main">
+                        <div class="img-holder rounded-20">
+                            <!-- <label class="strip bottom-right">
+                                sponsored
+                            </label> -->
+                            <img src="{{job.thumbnailUrl}}" alt="">
+                        </div>
+                        <div class="info-holder">
+                            <!-- <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <label class="rating-info" for=""><span>4.5</span><span>(121)</span></label>
+                            </div> -->
+                            <label class="card-title w-75">
+                                {{job.name}}
+                            </label>
+                            <label class="card-subtitle" for="">{{job.location}}</label>
+                            <div class="card-detail">
+                                <!-- <div class="detail">
+                                    <label for=""><i class="far fa-clock mr-2"></i> 9:00 AM - 10:00 PM</label>
+                                    <label for=""><i class="fas fa-phone-alt mr-2"></i> +1838183818</label>
+                                </div> -->
+                                <div class="img">
+                                    <div>
+                                        <a [routerLink]="['/dashboard/job/edit']" routerLinkActive="router-link-active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div>
+                                        <a><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

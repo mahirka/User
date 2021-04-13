@@ -14,7 +14,10 @@ const routes: Routes = [
   {path: 'sample', loadChildren: () => import('./sample-listing/sample-listing.module').then(m => m.SampleListingModule)},
   {path: 'dashboard/business-listing', loadChildren: () => import('./business-listing/business-listing.module').then(m => m.BusinessListingModule)},
   {path: 'products-and-services', loadChildren: () => import('./products-and-services/products-and-services.module').then(m => m.ProductsAndServicesModule)},
-
+  {path: 'dashboard/automobile', loadChildren: () => import('./automobile/automobile.module').then(m => m.AutomobileModule)},
+  {path: 'dashboard/job', loadChildren: () => import('./job-listings/job-listings.module').then(m => m.JobListingsModule)},
+  {path: 'dashboard/real-estate', loadChildren: () => import('./real-estate/real-estate.module').then(m => m.RealEstateModule)},
+  {path: 'dashboard/fashion', loadChildren: () => import('./fashion/fashion.module').then(m => m.FashionModule)},
   {path: '',loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   ]},
 // {path: ion'', redirectTo: 'home', pathMatch: 'full'},

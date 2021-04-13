@@ -4,6 +4,9 @@ import { DashboardHomeComponent } from './dashboard-home/dashboard-home.componen
 import { PlanViewComponent } from './plan-view/plan-view.component';
 import { AuthGuard } from '../core/auth.guard';
 import { RouterModule, Routes } from '@angular/router';
+import { ChartsModule } from 'ng2-charts/public_api';
+
+
 
 
 const routes: Routes = [
@@ -20,6 +23,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    ChartsModule
 
   ]
 })

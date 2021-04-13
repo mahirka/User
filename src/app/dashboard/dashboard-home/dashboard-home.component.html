@@ -1,50 +1,121 @@
-<div class="container">
-    <div class="dash-view">
-        <div class="dash-title">
-            <div class="heading-tag">
-                <p>Dashboard</p>
+<div class="container-fluid p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <div class="title-block">
+                      <div>
+                        <label for=""class="plan-card__title">Users</label>
+                       </div>
+                     </div>
+                    <div class="plan-card__detail">
+                        <div class="sub-detail">
+                            <div class="sub-para">
+                               <p>Total</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>45</p>
+                             </div>
+                        </div>
+                        <div class="sub-detail">
+                            <div  class="sub-para">
+                               <p>Online</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>10</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="dash-detail">
-            <div class="menu-category">
-                <div class="dash-menu">
-                    <a>Automobile</a>
-                  </div>
-                  <div class="dash-menu">
-                      <a>Business Listing</a>
-                  </div>
-                  <div class="dash-menu">
-                      <a>Fashion</a>
-                  </div>
-                  <div class="dash-menu">
-                      <a>Job</a>
-                  </div>
-                  <div class="dash-menu">
-                      <a>Real-Estate</a>
-                  </div>
+            <div class="col-md-4 col-sm-12 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <div class="title-block">
+                        <div>
+                          <label for=""class="plan-card__title">Executives</label>
+                         </div>
+                       </div>
+                    <div class="plan-card__detail">
+                        <div class="sub-detail">
+                            <div class="sub-para">
+                               <p>Total</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>45</p>
+                             </div>
+                        </div>
+                        <div class="sub-detail">
+                            <div  class="sub-para">
+                               <p>Online</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>10</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="count-container">
-                <div class="dash-menu">
-                    <a>1</a>
-                  </div>
-                  <div class="dash-menu">
-                    <a>2</a>
-                  </div>
-                  <div class="dash-menu">
-                    <a>3</a>
-                  </div>
-                  <div class="dash-menu">
-                    <a>1</a>
-                  </div>
-                  <div class="dash-menu">
-                    <a>1</a>
-                  </div>
+            <div class="col-md-4 col-sm-12 mb-md-0 mb-3">
+                <div class="plan-card">
+                    <div class="title-block">
+                        <div>
+                          <label for=""class="plan-card__title">Branches</label>
+                         </div>
+                       </div>
+                    <div class="plan-card__detail">
+                        <div class="sub-detail">
+                            <div class="sub-para">
+                               <p>Total</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>45</p>
+                             </div>
+                        </div>
+                        <div class="sub-detail">
+                            <div  class="sub-para">
+                               <p>Online</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>10</p>
+                             </div>
+                        </div> 
+                    </div>
+        
+                </div>
             </div>
-            <div class="graph-container">
-                <img src="../../../assets/img/graph.png">
-
+        </div> 
+        <div class="row ">
+            <div class="graph-view">
+                <div class="graph-block">
+                    <label for="" class="plan-card__title">Business LIstings</label>
+                    
+                    <div class="plan-card__detail">
+                        <div class="sub-detail">
+                            <div class="sub-para">
+                               <p>Total</p>
+                            </div>
+                            <div  class="sub-para">
+                                <p>45</p>
+                             </div>
+                        </div>
+                        <div>
+                            <div style="display: block;">
+                                <canvas baseChart
+                                [datasets]="barChartData"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType"></canvas>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                </div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
+
+
 

@@ -1,0 +1,266 @@
+<div class="container">
+    <div class="list-view">
+        <div class="heading-title">
+            <h3>Fashion</h3>
+        </div>
+        <form  (ngSubmit)="submit()" [formGroup]="fashionForm">
+        <div class="edit-view">
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Upload Vedio File Here</p>
+                    </div>
+                    <div class="img-block">
+                        <div class="edit-img">
+                            <img src="../../../../../assets/img/riom.png">
+                        </div>
+                        <div class="add-img">
+                            <img src="../../../../../assets/img/vedio-svg.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Title</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="title">
+                        <div *ngIf="(isSubmitted && title.invalid) || ( title.invalid &&(title.dirty || title.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="title.errors.required" class="err-font">
+                                Please provide a valid Title.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Category</p>
+                    </div>
+                    <div class="dropdown">
+                        <select name="Select a Field" class="dropbtn" required
+                        formControlName="category">
+                            <option >Dress Materials</option>
+                            <option >Fruits</option>
+                        </select>
+                    </div>
+                    <div *ngIf="(isSubmitted && category.invalid) || ( category.invalid &&(category.dirty || category.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="category.errors.required" class="err-font">
+                                Please provide a valid Category.
+                            </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Sub-Category </p>
+                    </div>
+                    <div class="dropdown">
+                        <select name="Select a Field" class="dropbtn" required
+                        formControlName="subcat">
+                            <option >Dress Materials</option>
+                            <option >Fruits</option>
+                        </select>
+                    </div>
+                    <div *ngIf="(isSubmitted && subcat.invalid) || ( subcat.invalid &&(subcat.dirty || subcat.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="subcat.errors.required" class="err-font">
+                                Please provide a valid Sub-Category.
+                            </div>
+                    </div> 
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Price</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="price">
+                        <div *ngIf="(isSubmitted && price.invalid) || ( price.invalid &&(price.dirty || price.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="price.errors.required" class="err-font">
+                                Please provide a valid Price.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Offer Price </p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="offer">
+                        <div *ngIf="(isSubmitted && offer.invalid) || ( offer.invalid &&(offer.dirty || offer.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="offer.errors.required" class="err-font">
+                                Please provide a valid Offer Price.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Quantity</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="quantity">
+                        <div *ngIf="(isSubmitted && quantity.invalid) || ( quantity.invalid &&(quantity.dirty || quantity.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="quantity.errors.required" class="err-font">
+                                Please provide a valid Quantity.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Location </p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="location">
+                        <div *ngIf="(isSubmitted && location.invalid) || ( location.invalid &&(location.dirty || location.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="location.errors.required" class="err-font">
+                                Please provide a valid Location.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p> Description</p>
+                    </div>
+                    <div class="text-block">
+                        <textarea type="text" placeholder="" class="text-areablock" required
+                        formControlName="description"></textarea>
+                        <div *ngIf="(isSubmitted && description.invalid) || ( description.invalid &&(description.dirty || description.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="description.errors.required" class="err-font">
+                                Please provide a valid Description.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="edit-buttonblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p style="font-weight: bold;">Warranty Details</p>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Lorem Ipsum Doler</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="warranty">
+                        <div *ngIf="(isSubmitted && warranty.invalid) || ( warranty.invalid &&(warranty.dirty || warranty.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="warranty.errors.required" class="err-font">
+                                Please provide a valid Warranty.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="edit-buttonblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p style="font-weight: bold;">Delivery Details</p>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="delivery">
+                        <div *ngIf="(isSubmitted && delivery.invalid) || ( delivery.invalid &&(delivery.dirty || delivery.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="delivery.errors.required" class="err-font">
+                                Please provide a valid Delivery.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Return Option</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="returnoption">
+                        <div *ngIf="(isSubmitted && returnoption.invalid) || ( returnoption.invalid &&(returnoption.dirty || returnoption.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="returnoption.errors.required" class="err-font">
+                                Please provide a valid Return.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Tracking Option</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="tracking">
+                        <div *ngIf="(isSubmitted && tracking.invalid) || ( tracking.invalid &&(tracking.dirty || tracking.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="tracking.errors.required" class="err-font">
+                                Please provide a valid Tracking.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Contact</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="contact">
+                        <div *ngIf="(isSubmitted && contact.invalid) || ( contact.invalid &&(contact.dirty || contact.touched))"
+                             class="alert alert-danger">
+                            <div *ngIf="contact.errors.required" class="err-font">
+                                Please provide a valid Contact.
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="edit-main-block">
+                <div class="button-block">
+                    <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+                    <button class="btn btn-primary mt-3 save-button" (click)='submit()'>Submit<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+

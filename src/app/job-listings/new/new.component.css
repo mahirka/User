@@ -1,0 +1,155 @@
+.container{
+    margin-top: 35px;
+    width: auto;
+    margin-left: 305px;
+  }
+  .heading-title h3{
+    font-weight: bold;
+    color:#008081 ;
+  }
+    .edit-mainblock{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .edit-block{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    .text-block{
+      width: 100%;
+    }
+    .text-area{
+      width: 80%;
+      font-size: small;
+      padding: 0.5rem;
+      
+    }
+    .edit-block{
+      margin-bottom: 2rem;
+    }
+    .save-button{
+      width: 150px;
+      background-color: #008081;
+    }
+    .name-label p{
+      margin: 0;
+    }
+    .list-view{
+      
+        margin-top: 50px;
+        flex-direction: row;
+        margin-bottom: 60px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 12px;
+        padding: 2rem;
+    }
+    .edit-buttonblock{
+        display: flex;
+        justify-content: space-between;
+    }
+    .add-button{
+        background-color: #00B3DA;
+    }
+    .error-msg{
+      font-size: 14px;
+        color: red;
+    }
+  
+    .alert {
+      border: 0;
+      margin-bottom: 0;
+      background-color: white;
+      padding: 0.5rem;
+      color: red;
+      font-size: smaller;
+    }
+  
+    @media (max-width: 1200px) {
+      
+    }
+    
+    @media (max-width: 992px) {
+      .container{
+        margin-left: 0;
+      }
+      .edit-mainblock{
+          display: flex;
+          flex-direction: column;
+        }
+        .edit-buttonblock{
+          display: flex;
+          flex-direction: column; 
+        }
+        .text-area{
+          width: 100%;
+          font-size: small;
+          padding: 0.5rem;
+          
+        }
+        .edit-block{
+          width: 100%;
+      }
+      .heading-title h3{
+        font-weight: bold;
+        color: #008081;
+      }
+      .dropbtn {
+        background-color: white;
+        color: black;
+        padding: 0.5rem;
+        font-size: small;
+        cursor: pointer;
+        border: 1px solid;
+        width: 80%;
+        text-align: left;
+        border-color: gray;
+      }
+  
+    
+      
+    }
+    
+    @media (max-width: 768px) {
+      .edit-block{
+          width: 100%;
+      }
+      .error-msg{
+        font-size: 14px;
+          color: red;
+          margin-left: 12rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .edit-block{
+          width: 100%;
+      }
+      .error-msg{
+        font-size: 14px;
+          color: red;
+          margin-left: 8rem;
+      }
+    }
+    @media (max-width: 400px) {
+      .list-view{
+          margin:2rem  0;
+      }
+      .edit-block{
+          width: 100%;
+      }
+      .error-msg{
+        font-size: 14px;
+          color: red;
+          margin-left: 4rem;
+      }
+    }
+    @media (max-width: 300px) {
+      
+    }
+  
+    
+  

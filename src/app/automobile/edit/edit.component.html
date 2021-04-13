@@ -1,0 +1,223 @@
+<div class="container">
+    <div class="list-view"> 
+      <div class="heading-title">
+              <h3> Edit Automobile</h3>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Basic Info</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Gallery</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Review</a>
+        </div>
+      </nav>
+      <div class="tab-content mt-4" id="nav-tabContent" >
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <form  (ngSubmit)="submit()" [formGroup]="automobileForm">
+                <div class="edit-view">
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Would you like to Rent/Sale?</p>
+                            </div>
+                            <div class="dropdown">
+                                <select name="Select a Field" class="dropbtn" required
+                                 formControlName="sale">
+                                    <option >Rent</option>
+                                    <option >Sale</option>
+                                </select>
+                            </div>
+                            <div *ngIf="(isSubmitted && sale.invalid) || ( sale.invalid &&(sale.dirty || sale.touched))"
+                                class="alert alert-danger">
+                                
+                            </div> 
+                        </div>
+                        <div class="edit-block">
+      
+                            <div class="name-label">
+                                <p>What do you want to Rent/Sale?</p>
+                            </div>
+                            <div class="dropdown">
+                                <select name="Select a Field" class="dropbtn" required
+                                formControlName="rent">
+                                    <option >Rent</option>
+                                    <option >Sale</option>
+                                </select>
+                            </div>
+                            <div *ngIf="(isSubmitted && rent.invalid) || ( rent.invalid &&(rent.dirty || rent.touched))"
+                                class="alert alert-danger">
+                                
+                            </div>
+                        </div> 
+                    </div>    
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Vehicle</p>
+                            </div>
+                            <div class="dropdown">
+                                <select name="Select a Field" class="dropbtn" required
+                                formControlName="vehicle">
+                                    <option >Bike</option>
+                                    <option >Car</option>
+                                    <option >Bus</option>
+                                </select>
+                            </div>
+                            <div *ngIf="(isSubmitted && vehicle.invalid) || ( vehicle.invalid &&(vehicle.dirty || vehicle.touched))"
+                                     class="alert alert-danger">
+                                     
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Brand</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="brand">
+                                <div *ngIf="(isSubmitted && brand.invalid) || ( brand.invalid &&(brand.dirty || brand.touched))"
+                                     class="alert alert-danger">
+                                     
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Model </p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="model">
+                                <div *ngIf="(isSubmitted && model.invalid) || ( model.invalid &&(model.dirty || model.touched))"
+                                     class="alert alert-danger">
+                                     
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Fuel</p>
+                            </div>
+                            <div class="dropdown">
+                                <select name="Select a Field" class="dropbtn" required
+                                formControlName="fuel">
+                                    <option >Petrol</option>
+                                    <option >Diesel</option>
+                                </select>
+                            </div>
+                            <div *ngIf="(isSubmitted && fuel.invalid) || ( fuel.invalid &&(fuel.dirty || fuel.touched))"
+                                     class="alert alert-danger">
+                                     
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Year of Manufacturing  </p>
+                            </div>
+                            <div class="dropdown">
+                                <select name="Select a Field" class="dropbtn"required
+                                formControlName="year">
+                                    <option >2000</option>
+                                    <option >2001</option>
+                                    <option >2002</option>
+                                    <option >2003</option>
+                                    <option >2004</option>
+                                    <option >2005</option>
+                                </select>
+                            </div>
+                            <div *ngIf="(isSubmitted && year.invalid) || ( year.invalid &&(year.dirty || year.touched))"
+                                     class="alert alert-danger">
+                                     
+                             </div> 
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Kilometers Driven</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="driven">
+                                <div *ngIf="(isSubmitted && driven.invalid) || ( driven.invalid &&(driven.dirty || driven.touched))"
+                                     class="alert alert-danger">
+                                     
+                                 </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Description </p>
+                            </div>
+                            <div class="text-block">
+                                <textarea type="text" placeholder="" class="text-areablock" required
+                                formControlName="description"></textarea>
+                                <div *ngIf="(isSubmitted && description.invalid) || ( description.invalid &&(description.dirty || description.touched))"
+                                     class="alert alert-danger">
+                                     
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p> Spare Parts Name</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="spare">
+                                <div *ngIf="(isSubmitted && spare.invalid) || ( spare.invalid &&(spare.dirty || spare.touched))"
+                                     class="alert alert-danger">
+                                     
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-mainblock">
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>Price</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="" class="text-area" required
+                                formControlName="price">
+                                <div *ngIf="(isSubmitted && price.invalid) || ( price.invalid &&(spare.dirty || price.touched))"
+                                     class="alert alert-danger">
+                                     
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="edit-block">
+                            <div class="name-label">
+                                <p>EMI</p>
+                            </div>
+                            <div class="text-block">
+                                <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                                formControlName="emi">
+                                <div *ngIf="(isSubmitted && emi.invalid) || ( emi.invalid &&(emi.dirty || emi.touched))"
+                                     class="alert alert-danger">
+                                     
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-main-block">
+                        <div class="button-block">
+                            <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+                            <button class="btn btn-primary mt-3 save-button" (click)='submit()'>Submit<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><p>Gallery works</p></div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p>Review works</p></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  

@@ -1,0 +1,202 @@
+<div class="container">
+    <div class="list-view">
+        <div class="heading-title">
+            <h3>Job</h3>
+        </div>
+        <form  (ngSubmit)="submit()" [formGroup]="jobForm">
+        <div class="edit-view">
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Job Title</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Select a Field" class="text-area" required
+                        formControlName="title">
+                        <div *ngIf="(isSubmitted && title.invalid) || ( title.invalid &&(title.dirty || title.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Company Name</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Select a Field" class="text-area" required
+                        formControlName="name">
+                        <div *ngIf="(isSubmitted && name.invalid) || ( name.invalid &&(name.dirty || name.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Experience</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="experience">
+                        <div *ngIf="(isSubmitted && experience.invalid) || ( experience.invalid &&(experience.dirty || experience.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Salary</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="salary">
+                        <div *ngIf="(isSubmitted && salary.invalid) || ( salary.invalid &&(salary.dirty || salary.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Food and accommodation
+                        </p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="food">
+                        <div *ngIf="(isSubmitted && food.invalid) || ( food.invalid &&(food.dirty || food.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Contact</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="contact">
+                        <div *ngIf="(isSubmitted && contact.invalid) || ( contact.invalid &&(contact.dirty || contact.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Location</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area"  required
+                        formControlName="location">
+                        <div *ngIf="(isSubmitted && location.invalid) || ( location.invalid &&(location.dirty || location.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Description</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="description">
+                        <div *ngIf="(isSubmitted && description.invalid) || ( description.invalid &&(description.dirty || description.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-buttonblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p style="font-weight: bold;">Prevoius Expereience Title</p>
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="button-block">
+                        <button class="btn btn-primary mt-3 add-button">+ Add New Item</button>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Title </p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="titles">
+                        <div *ngIf="(isSubmitted && titles.invalid) || ( titles.invalid &&(titles.dirty || titles.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Compamny Name</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area" required
+                        formControlName="label">
+                        <div *ngIf="(isSubmitted && label.invalid) || ( label.invalid &&(label.dirty || label.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mainblock">
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="" class="text-area" required
+                        formControlName="year">
+                        <div *ngIf="(isSubmitted && year.invalid )|| ( year.invalid &&(year.dirty || year.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-block">
+                    <div class="name-label">
+                        <p>Links</p>
+                    </div>
+                    <div class="text-block">
+                        <input type="text" placeholder="Lorem Ipsum Doler" class="text-area"required
+                        formControlName="link">
+                        <div *ngIf="(isSubmitted && link.invalid) || ( link.invalid &&(link.dirty || link.touched))"
+                             class="alert alert-danger">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-main-block">
+                <div class="button-block">
+                    <p class="error-msg" *ngIf="errorMessage" for="">{{errorMessage}}</p>
+                    <button class="btn btn-primary mt-3 save-button" (click)='submit()'>Submit<i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i></button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

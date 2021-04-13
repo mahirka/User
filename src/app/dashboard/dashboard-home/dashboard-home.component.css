@@ -1,160 +1,103 @@
+.plan-card {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+.row{
+  display: flex;
+  justify-content: center;
+}
 .container{
-    margin-top: 35px;
-    width: auto;
-    margin-left: 305px;
-  }
-  .heading-tag{
-    font-weight: bold;
-    font-size: large;
-  }
-  .heading-tag p{
-    color: #008081;
-  }
-  .dash-title{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #E1E3E2;
-  }
-  .upload-bt{
-    display: flex;
-  }
-  .dash-menu{
-      margin-bottom: 1rem;
-  }
-  .dash-detail{
-    width: 100%;
-    margin-top: 2rem;
-    padding: 1rem;
-    display: flex;
-    justify-content:space-between;
-  }
-  .menu-category{
-      display:flex;
-      flex-direction:column;
-  }
-  .count-container{
-    display:flex;
-    flex-direction:column;
-  }
-  .about-pro{
-    margin-left: 2rem;
-    width: 50%;
-  }
-  .reset-block{
-    display: flex;
-    margin-top: 2rem;
-  }
-  .edit-bt{
-    display: flex;
-  }
-  .reset-bt{
-    display: flex;
-    margin-left: 1rem;
-  }
-  .pro-img{
-    width: 30%;
-  }
-  .edit-icon{
-    margin-right: 0.5rem;
-  }
-  .text-label a{
-    color: #00A2FF;
-  }
-  .edit-icon i{
-    color: #00A2FF;
-  }
-  .upload-bt{
-    position: relative;
-    bottom: 50px;
-    z-index: 5;
-    left: 20px;
-    background-color: white;
-    width: 170px;
-    padding-left: 1rem;
-    border-radius: 50px;
-    height: 38px;
-    padding-top: 0.5rem;
+  margin-top: 35px;
+  width: auto;
+  margin-left: 305px; 
+}
+.title-block{
+  display: flex;
+  justify-content: space-between;
+}
+.title-icon i{
+  color: royalblue;
+  font-size: larger;
+}
+.sub-para p{
+  font-size: x-large;
+  font-family: monospace;
+  font-weight: bold;
+}
+.plan-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  color: #008081;
   
+}
+.plan-card__detail{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.sub-detail{
+  display: flex;
+  justify-content: space-between;
+}
+.plan-card__subtitle {
+  font-size: 14px;
+}
+
+
+.plan-card__detail--item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.plan-card__detail--item i {
+  font-size: 12px;
+  color: #008081;
+  margin-top: 3px;
+}
+
+.plan-card__detail--item span {
+  font-size: 12px;
+}
+
+.plan-card button {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.plan-card__link {
+  font-size: 12px;
+  color: #222222;
+  margin-bottom: 0;
+  border-bottom: 1px solid;
+}
+
+.graph-view{
+  display: flex;
+  width: 100%;
+  margin-top: 3rem;
+  padding-left: 15px;
+  padding-right: 15px;  
+}
+
+.graph-block{
+  margin-top: 1rem;
+  height: 700px;
+  width: 100%;
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #F2F2F2;
+}
+
+@media (max-width: 992px) {
+  .container{
+    margin-left: 0;
   }
-  .add-bt{
-    margin-right: 0.5rem;
-  }
-  .edit-view{
-    padding: 1rem;
-  }
-  .edit-mainblock{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .edit-block{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .text-block{
-    width: 100%;
-  }
-  .text-area{
-    width: 500px;
-    font-size: small;
-    padding: 0.5rem;
-    
-  }
-  .edit-block{
-    margin-bottom: 2rem;
-  }
-  .save-button{
-    width: 150px;
-  }
-  .name-label p{
-    margin: 0;
-  }
-  .dash-view{
-      margin-top: 50px;
-      flex-direction: row;
-      margin-bottom: 60px;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      -webkit-box-shadow: 0px 3px 6px #00000029;
-              box-shadow: 0px 3px 6px #00000029;
-      border-radius: 12px;
-      padding: 2rem;
-  }
-  .edit-area{
-    color: #00A2FF;
-    font-weight: bold;
-    
-  }
-  .text-area{
-    width: 100%;
-    font-size: small;
-    padding: 0.5rem;
-    
-  }
-  
-  
-  @media (max-width: 1200px) {
-    
-    
-  }
-  
-  @media (max-width: 992px) {
-    .container{
-      margin-left: 0;
-    }  
-  }
-  @media (max-width: 768px) {
-    
-  }
-  
-  @media (max-width: 576px) {
-    
-  }
-  @media (max-width: 400px) {
-  }
-    
-  @media (max-width: 300px) {
-    
-  }
-  
+}
